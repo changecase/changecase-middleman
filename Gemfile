@@ -11,4 +11,4 @@ gem "middleman-livereload", "3.1.0"
 gem "wdm", "0.1.0", :platforms => [:mswin, :mingw]
 
 # Deploying plugin
-gem "middleman-deploy", "0.2.3"
+gem "middlman-deploy", "0.2.3"
