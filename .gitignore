@@ -17,9 +17,5 @@
 .DS_Store
 
 # Ignore swap files
-*~
-*.swo
 *.swp
-
-# Ignore gemfile lock files
-*.lock
+*.swo
