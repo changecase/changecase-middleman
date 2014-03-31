@@ -104,12 +104,13 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.method       = :rsync
   deploy.build_before = true
-    # Optional Settings
-    deploy.remote = "stage"           # remote name or git url, default: origin
-    # deploy.branch = "web"             # default: gh-pages
-    # deploy.strategy = :submodule    # commit strategy: can be :force_push  
-                                      #                  or :submodule, 
-                                      #                  default: :force_push
+  deploy.host         = "stage.changecase.net"
+  deploy.path         = "~/stage.changecase.net"
+  # Optional Settings
+  deploy.user = "changecase" # no default
+  # deploy.port = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = "-rltgoDvzO" --no-p --del # add custom flags, default: -avz
 end
