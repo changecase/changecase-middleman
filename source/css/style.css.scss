@@ -1,0 +1,13 @@
+/* variables */
+
+$background-color: #FFF;
+
+/* header */
+
+.title a {
+  text-decoration: none;
+  &:link    { color: $background-color; }
+  &:visited { color: $background-color; }
+  &:hover   { color: $background-color; }
+  &:active  { color: $background-color; }
+}
