@@ -79,7 +79,7 @@ page "blog/*",    layout: :article_layout
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'css'
 
 set :js_dir, 'javascripts'
 

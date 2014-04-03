@@ -1,13 +1,18 @@
-/* variables */
-
-$background-color: #FFF;
-
 /* header */
 
 .title a {
-  text-decoration: none;
   &:link    { color: $background-color; }
   &:visited { color: $background-color; }
   &:hover   { color: $background-color; }
   &:active  { color: $background-color; }
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+  &:link    { color: $primary-color; }
+  &:visited { color: $secondary-color; }
+  &:hover   { color: #000; }
+  &:active  { color: #000; }
 }
