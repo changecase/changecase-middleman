@@ -63,13 +63,14 @@ a {
   }
 
   /* main content wrapper */
-  article { 
+  #article-title + article { 
     background-color: #eee;
     background-color: rgba(255,255,255,0.8); 
     padding: 0  1em;
     margin:  50% -1em 0;
   }
-  aside { margin-top: 50% }
+
+  #article-title + article + aside { margin-top: 50% }
 }
 
 /* code blocks */
