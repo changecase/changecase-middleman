@@ -1,3 +1,11 @@
+@mixin vertical-linear-gradient( $start-color, $start-opacity, $end-color, $end-opacity ) {
+  background: -webkit-gradient(linear, 0% $start-opacity, 0% $end-opacity, from($start-color), to($end-color));         // Safari 4-5, Chrome 1-9
+  background: -webkit-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                       // Safari 5.1, Chrome 10+
+  background: -moz-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                          // Firefox 3.6+
+  background: -ms-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                           // IE 10
+  background: -o-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                            // Opera 11.10+
+  background: linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);
+}
 /* header */
 
 .title a {
@@ -17,21 +25,51 @@ a {
   &:active  { color: #000; }
 }
 
-/* background */
-body {
-  background: url('/images/wayback.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-}
+@media only screen and (min-width: 1140px) {
+  /* background */
+  #article-title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5000;
+    background: url('/images/wayback-min.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    h1 { 
+      color: #fff;
+      width: 50%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      font-size: 4em;
+      line-height: 1.4;
+    }
+  }
+  #article-title:after {
+    height: 100%;
+    content: "";
+    display: block;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC45Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    @include vertical-linear-gradient(rgba(0,0,0,0), 0%, rgba(0,0,0,0.9), 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000000', endColorstr='#e6000000', GradientType-0);
+    margin-bottom: 100%;
+  }
 
-/* main content wrapper */
-article { 
-  background-color: #eee;
-  background-color: rgba(255,255,255,0.8); 
-  padding: 0  1em;
-  margin:  0 -1em;
+  /* main content wrapper */
+  article { 
+    background-color: #eee;
+    background-color: rgba(255,255,255,0.8); 
+    padding: 0  1em;
+    margin:  50% -1em 0;
+  }
+  aside { margin-top: 50% }
 }
 
 /* code blocks */
@@ -47,7 +85,10 @@ pre {
   word-wrap: inherit;
 }
 
-.highlight { overflow: scroll; }
+.highlight { 
+  overflow: scroll; 
+  border: 1px solid #eee;
+}
 
 .highlight td {
   padding: 8px 15px;

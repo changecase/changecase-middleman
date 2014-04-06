@@ -30,6 +30,8 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+page "/",         layout: :standard_layout
+page "blog.html",      layout: :standard_layout
 page "blog/*",    layout: :article_layout
 
 ###

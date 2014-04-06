@@ -1,4 +1,6 @@
 - wrap_layout :layout do
-  %h1= current_resource.data.title
-  = find_and_preserve do
-    = yield
+  #article-title
+    %h1= current_resource.data.title
+  %article
+    = find_and_preserve do
+      = yield
