@@ -85,6 +85,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :markdown_engine, :kramdown
+set :markdown, fenced_code_blocks: true, smartypants: true
+
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -114,3 +118,5 @@ activate :deploy do |deploy|
   # deploy.clean = true # remove orphaned files on remote host, default: false
   # deploy.flags = "-rltgoDvzO" --no-p --del # add custom flags, default: -avz
 end
+
+activate :syntax, line_numbers: true, wrap: true
