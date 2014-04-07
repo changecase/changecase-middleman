@@ -1,8 +1,21 @@
 /* Variables */
 
-$primary-color: #933;
-$secondary-color: #600;
+$primary-color: #d33;
+$secondary-color: #a00;
 $background-color: #FFF;
+
+/* ========================================================================
+   MIXINS 
+   ======================================================================== */
+
+@mixin vertical-linear-gradient( $start-color, $start-opacity, $end-color, $end-opacity ) {
+  background: -webkit-gradient(linear, 0% $start-opacity, 0% $end-opacity, from($start-color), to($end-color));         // Safari 4-5, Chrome 1-9
+  background: -webkit-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                       // Safari 5.1, Chrome 10+
+  background: -moz-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                          // Firefox 3.6+
+  background: -ms-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                           // IE 10
+  background: -o-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                            // Opera 11.10+
+  background: linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);
+}
 
 /* Includes */
 @import "normalize.min";
