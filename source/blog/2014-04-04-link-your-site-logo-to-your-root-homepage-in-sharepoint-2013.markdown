@@ -77,15 +77,13 @@ SharePoint will generate `copenhagen.master`.
 
 Locate the SiteLogoImage control. It will look something like this:
 
-~~~ csharp
+~~~ html
 <!--<MS:<SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" id="onetidProjectPropertyTitleGraphic">-->
   <!--<MS:<SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="ontidHeadbnnr2" LogoImageURL="/_layouts/15/images/siteIcon.png?rev=23" runat="server">-->
-    -- OTHER STUFF --
+    <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><img id="ct100_onetidHeadbnnr2" class="ms-siteicon-img" name="onetidHeadbnnr0" Src="http://changecase.net/_layouts/15/images/siteIcon.png?rev=23" alt="Content site" /><!--PE: End of READ-ONLY PREVIEW-->
   <!--ME:</SharePoint:SPLinkButton>-->
 <!--ME:</SharePoint:SPSimpleSiteLink>-->
 ~~~
-
-**JEFF! fix the markup around the sitelogoimage!**
 
 Now, all you need to do is replace the `SPSimpleSiteLink` with something better.
 [According to MSDN][1], this control is pretty useless. It merely "provides a link 
@@ -95,10 +93,10 @@ So, to fix it, you need to replace the SPSimpleSiteLink control with something
 more useful. In this case, it is pretty easy: just replace it with the `SPLinkButton` 
 control:
 
-~~~ csharp
+~~~ html
 <!--MS:<SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/" id="onetidProjectPropertyTitleGraphic">-->
   <!--MS:<SharePoint:SiteLogoImage name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="images/logo.png" runat="server">-->
-    -- OTHER STUFF --
+    <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><img id="ct100_onetidHeadbnnr2" class="ms-siteicon-img" name="onetidHeadbnnr0" Src="http://changecase.net/_layouts/15/images/siteIcon.png?rev=23" alt="Content site" /><!--PE: End of READ-ONLY PREVIEW-->
   <!--ME:</SharePoint:SiteLogoImage>-->
 <!--ME:</SharePoint:SPLinkButton<-->
 ~~~
