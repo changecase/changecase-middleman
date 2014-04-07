@@ -1,5 +1,5 @@
 ---
-title: InDesign to Ebook &ndash; Duplicated List Symbols
+title: InDesign to Ebook&nbsp;&ndash; Duplicated List Symbols
 title_image: studying.min.jpg
 date: 2013-06-20
 tags: InDesign, eBook, ePub, mobi
@@ -47,7 +47,7 @@ Ron has a decent idea here, but he really needs to be properly nesting the
 elements within the list item. Ron's solution leaves the document in only 
 barely better condition than it was when it started:
   
-{% highlight html linenos %}
+~~~ html
 <body id="List_test" xml:lang="en-US">
   <div class="Basic-Text-Frame">
     <ol>
@@ -60,11 +60,11 @@ barely better condition than it was when it started:
     </ol>
   </div>
 </body>
-{% endhighlight %}
+~~~
 
 Instead, he should be nesting that paragraph within the first list item:
 
-{% highlight html linenos %}
+~~~ html
 <body id="List_test" xml:lang="en-US">
   <div class="Basic-Text-Frame">
     <ol>
@@ -78,11 +78,11 @@ Instead, he should be nesting that paragraph within the first list item:
     </ol>
   </div>
 </body>
-{% endhighlight %}
+~~~
 
 As a result, he can get rid of the extra non-semantic ordered lists:
 
-{% highlight html linenos %}
+~~~ html
 <body id="List_test" xml:lang="en-US">
   <div class="Basic-Text-Frame">
     <ol>
@@ -94,7 +94,7 @@ As a result, he can get rid of the extra non-semantic ordered lists:
     </ol>
   </div>
 </body>
-{% endhighlight %}
+~~~
 
 Doesn't that look so much better? There's still a bunch of unnecessary stuff 
 there though.
@@ -112,7 +112,7 @@ Adobe tries to implement custom list styling by making lists behave like blocks
 and by taking away all of the default hanging indentation with the following 
 CSS rules:
 
-{% highlight css %}
+~~~ css
 li { /* Make a list item behave like a generic block element */
   display: block;
 }
@@ -122,13 +122,13 @@ ol, ul, li { /* Strip all spacing from lists and list items */
   padding: 0;
   border-width: 0;
 }
-{% endhighlight %}
+~~~
 
 So, Liz Castro's "coder" [solution][3] is to just make everything _look_ like it 
 should through CSS overrides. She adds another stylesheet in the EPUB export
 process with the following rules:
 
-{% highlight css %}
+~~~ css
 li { /* Make lists behave like lists */
   display: list-item;
 }
@@ -136,7 +136,7 @@ li { /* Make lists behave like lists */
 ol, ul { /* Add two em measurements of negative space around each list */
   margin: 2em;
 }
-{% endhighlight %}
+~~~
 
 Since this stylesheet will be added after the default InDesign stylesheet, these
 CSS rules will override the bad InDesign CSS. Lists now behave like lists.
@@ -145,13 +145,17 @@ We still have the problem of a bunch of number entity references in numbered
 lists and bullet entity references in bulleted lists. Liz uses a GREP search &
 replace to get rid of the numbers:
 
-<pre>&lt;span class="ordered-list.*?&lt;/span&gt;</pre>
+~~~ grep
+<span class="ordered-list.*?</span>
+~~~
 
 The `ordered-list` class is the name of the paragraph style that used numbering.
 
 We can use a similar replacement to remove all of the bullets:
 
-<pre>&lt;span class="unordered-list.*?&lt;/span&gt;</pre>
+~~~ grep
+<span class="unordered-list.*?</span>
+~~~
 
 The result is not too shabby, but it doesn't help us correct the markup 
 semantically.
