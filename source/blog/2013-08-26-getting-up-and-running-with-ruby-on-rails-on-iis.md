@@ -1,5 +1,6 @@
 ---
 title: Getting Up and Running with Ruby on Rails on IIS
+title_image: left.min.jpg
 date: 2013-08-26
 tags: IIS, RoR
 ---

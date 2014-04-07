@@ -1,6 +1,5 @@
 - wrap_layout :layout do
-  #article-title
+  #article-title{ style: "background-image: url('/images/#{current_resource.data.title_image}')" }
     %h1= current_resource.data.title
-  %article
-    = find_and_preserve do
-      = yield
+  = find_and_preserve do
+    = yield

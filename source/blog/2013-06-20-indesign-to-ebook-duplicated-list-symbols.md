@@ -1,5 +1,6 @@
 ---
 title: InDesign to Ebook &ndash; Duplicated List Symbols
+title_image: studying.min.jpg
 date: 2013-06-20
 tags: InDesign, eBook, ePub, mobi
 ---

@@ -1,5 +1,6 @@
 ---
 title: Jekyll - Command Not Found
+title_image: wayback.min.jpg
 date: 2013-08-17
 tags: jekyll, dreamhost, heroku
 ---

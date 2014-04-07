@@ -1,5 +1,6 @@
 ---
 title: Add Custom Stylesheets to SharePoint 2013
+title_image: typewriter_apart.min.jpg
 date: 2014-03-28
 tags: stylesheet, SharePoint 2013, CSS
 ---
