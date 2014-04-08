@@ -46,9 +46,11 @@ a {
        -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    border-bottom: 3px solid rgba(243,0,0,.125);
     h1 { 
-      color: #f30000;
-      color: rgba(243,0,0,.5);
+      color: $background-color;
+      background-color: #f30000;
+      background-color: rgba(243,0,0,.5);
       position: relative;
       text-align: center;
       width: 1026px;
@@ -61,6 +63,10 @@ a {
       font-size: 4em;
       line-height: 1.4;
       text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+         -moz-border-radius: 20px 20px 20px 0;
+      -webkit-border-radius: 20px 20px 20px 0;
+              border-radius: 20px 20px 20px 0;
+       -khtml-border-radius: 20px 20px 20px 0;
     }
   }
   #article-title:after {
@@ -78,7 +84,26 @@ a {
     padding: 0  1em;
     margin:  0 -1em;
   }
-  article + aside { margin-top: 630px; }
+  .blog article + aside { margin-top: 630px; }
+  aside { 
+       -moz-border-radius: 0 20px 20px 20px;
+    -webkit-border-radius: 0 20px 20px 20px;
+            border-radius: 0 20px 20px 20px;
+     -khtml-border-radius: 0 20px 20px 20px;
+    .social_list { 
+      float: left;
+      list-style: none; 
+      display: block; 
+      min-height: 24px;
+      padding: 0; 
+      margin: 0; 
+      li { 
+        float: left; 
+        overflow: hidden; 
+        a { float: left; }
+      }
+    }
+  }
 }
 
 /* code blocks */
@@ -143,3 +168,26 @@ code {
           border-radius: 5px;
    -khtml-border-radius: 5px;
  }
+
+ /* Social icons */
+
+.icon {
+  float: left;
+  display: block;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+  margin-left: -50000px;
+  padding-right: 50000px;
+  margin-right: 12px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  &.twitter    { background-image: url('/images/glyphicons/twitter.png'); }
+  &.linkedin   { background-image: url('/images/glyphicons/linked_in.png'); }
+  &.googleplus { background-image: url('/images/glyphicons/google_plus.png'); }
+  &.github     { background-image: url('/images/glyphicons/github.png'); }
+  &.foursquare { background-image: url('/images/glyphicons/4square.png'); }
+  &.instagram  { background-image: url('/images/glyphicons/instagram.png'); }
+  &.flickr     { background-image: url('/images/glyphicons/flickr.png'); }
+  &.facebook   { background-image: url('/images/glyphicons/facebook.png'); }
+}
