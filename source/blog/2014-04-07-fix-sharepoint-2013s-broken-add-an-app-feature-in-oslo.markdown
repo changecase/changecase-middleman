@@ -1,6 +1,6 @@
 ---
 title: Fix SharePoint 2013's Broken &ldquo;Add an App&rdquo; Feature in Oslo
-title_image: tube.jpg
+title_image: tube.min.jpg
 date: 2014-04-07
 tags: SharePoint 2013, Oslo, loading, add an app
 ---
