@@ -1,5 +1,7 @@
 /* header */
 
+.header-container { font-family: $accent-font; }
+
 .title a {
   &:link    { color: $background-color; }
   &:visited { color: $background-color; }
@@ -105,6 +107,14 @@ a {
     }
   }
 }
+
+body { font-family: $body-font; }
+
+#article-title { font-family: $accent-font; }
+
+h1, h2, h3, h4, h5, h6 { font-family: $accent-font; }
+
+strong { font-family: $accent-font; }
 
 /* code blocks */
 pre {

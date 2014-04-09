@@ -18,6 +18,16 @@
     %link{ rel: 'stylesheet', href: '/css/base.css' }
 
     %script{ src: '/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js' }
+
+    -# load typekit
+    :javascript
+      (function(d) {
+        var config = {
+          kitId: 'zwp3sky',
+          scriptTimeout: 3000
+         },
+         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+       })(document);
     - if page_classes != "blog"
       %body{ class: page_classes }
     - else
