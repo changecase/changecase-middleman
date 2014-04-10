@@ -1,0 +1,8 @@
+---
+title: Test Project
+title_image: my_stuff.min.jpg
+date: 2014-04-10
+tags: InDesign, eBook, ePub, mobi
+---
+
+This is a test post.
