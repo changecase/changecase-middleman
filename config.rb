@@ -107,16 +107,32 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-activate :deploy do |deploy|
-  deploy.method       = :rsync
-  deploy.build_before = true
-  deploy.host         = "stage.changecase.net"
-  deploy.path         = "~/stage.changecase.net"
-  # Optional Settings
-  deploy.user = "changecase" # no default
-  # deploy.port = 5309 # ssh port, default: 22
-  # deploy.clean = true # remove orphaned files on remote host, default: false
-  # deploy.flags = "-rltgoDvzO" --no-p --del # add custom flags, default: -avz
+case ENV['TARGET'].to_s.downcase
+when 'production'
+  activate :deploy do |deploy|
+    deploy.method       = :rsync
+    # deploy.build_before = true
+    deploy.host         = "changecase.net"
+    deploy.path         = "~/changecase.net"
+    # Optional Settings
+    deploy.user = "changecase" # no default
+    # deploy.port = 5309 # ssh port, default: 22
+    deploy.clean = true # remove orphaned files on remote host, default: false
+    # deploy.flags = "-rltgoDvzO" --no-p --del # add custom flags, default: -avz
+  end
+else
+  activate :deploy do |deploy|
+    deploy.method       = :rsync
+    deploy.build_before = true
+    deploy.host         = "stage.changecase.net"
+    deploy.path         = "~/stage.changecase.net"
+    # Optional Settings
+    deploy.user = "changecase" # no default
+    # deploy.port = 5309 # ssh port, default: 22
+    # deploy.clean = true # remove orphaned files on remote host, default: false
+    # deploy.flags = "-rltgoDvzO" --no-p --del # add custom flags, default: -avz
+  end
 end
+
 
 activate :syntax, line_numbers: true, wrap: true
