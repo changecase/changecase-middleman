@@ -89,6 +89,7 @@ a {
   .blog, .work {
     article + aside { margin-top: 630px; }
   }
+  .work img { border: 3px solid rgba(243,0,0,.125);} 
   aside { 
        -moz-border-radius: 0 20px 20px 20px;
     -webkit-border-radius: 0 20px 20px 20px;

@@ -162,5 +162,9 @@ else
   end
 end
 
-
 activate :syntax, line_numbers: true, wrap: true
+
+# Activate Disqus extension
+activate :disqus do |disqus|
+  disqus.shortname = "changecase"
+end
