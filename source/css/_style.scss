@@ -139,12 +139,19 @@ strong { font-family: $accent-font; }
     @include vertical-linear-gradient(rgba(0,0,0,0), 0%, rgba(0,0,0,0.9), 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000000', endColorstr='#e6000000', GradientType-0);
   }
+  &:hover, &:active, &:focus {
+    h2 {
+      color: $primary-color;
+      background-color: $background-color;
+      background-color: rgba(243,243,243,.95);
+    }
+  }
   h2 {
     background-color: #f30000;
     background-color: rgba(243,0,0,.5);
     margin-left: -5px;
     padding-left: 5px;
-    a { color: $background-color; }
+    color: $background-color;
   }
 }
 
