@@ -1,0 +1,28 @@
+---
+title: Press Release 2013
+title_image: press-report-improved.jpg
+date: 2013-01-03
+tags: report, booklet, advisicon
+---
+
+A report including the progress made in 2013 and the vision of the Press 
+department for 2014 at [Advisicon](http://advisicon.com).
+
+READMORE
+
+![front cover](/images/press-report-improved.jpg){: width="100%" }
+
+![page one](/images/press-report-improved2.jpg){: width="48.634699999999999999%" }
+![page two](/images/press-report-improved3.jpg){: width="48.634699999999999999%" }
+
+![page twelve](/images/press-report-improved11.jpg){: width="100%" }
+
+![page twenty six](/images/press-report-improved25.jpg){: width="100%" }
+
+![page twenty eight](/images/press-report-improved27.jpg){: width="100%" }
+
+![page fourty](/images/press-report-improved39.jpg){: width="100%" }
+
+![page fourty one](/images/press-report-improved40.jpg){: width="48.634699999999999999%" }
+![page fourty two](/images/press-report-improved41.jpg){: width="48.634699999999999999%" }
+
