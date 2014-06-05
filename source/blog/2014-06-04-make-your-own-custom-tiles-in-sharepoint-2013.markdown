@@ -1,0 +1,148 @@
+---
+title: Make Your Own Custom Tiles in SharePoint 2013
+title_image: dinocar.min.jpg
+date: 2014-06-04
+tags: microsoft, sharepoint, promoted links list, tiles, custom
+build: false
+---
+
+Creating your own custom tiles is super easy in SharePoint 2013. Organizing 
+them can take a little bit more planning.
+
+The following method will create tiles that will work from theme to theme 
+without needing any further configuration. It will also ensure that you are 
+using a sensible pattern for storing your assets. And, when you were done, it 
+will look like Microsoft made your icon!
+
+READMORE
+
+## Create the Tile Image
+
+Let's start with some assumptions:
+
+- You've already figured out where you are going to link from and where you 
+  are linking to. The tiles are glorified hyperlinks, so you need a source 
+  (to display the tiles) and a destination (to send the user to).
+- The theme you are using uses a color for the `TileBackgroundOverlay` slot in
+  its `.spcolor` file. For more on SharePoint's color palette file, see the 
+  MSDN article [Color palettes and fonts in SharePoint 2013][1]. If you are 
+  using a very light color in this slot, you'll want to build your tile as a
+  dark color.
+- You have the necessary SharePoint permissions to add apps and edit lists. One 
+  of the apps you have permission to add is **Promoted Links**.
+- You have access to image editing software that can create [24-bit PNG][2] files.
+
+With those items squared away, create your png. It should be 150px square and 
+use a transparent background. The transparency will allow the color set in 
+your theme's `TileBackgroundOverlay` slot to show through. Use white (hex color 
+`#FFFFFF`) as your non-transparent pixels. 
+
+It is helpful to work in a vector image editing program for this, like Adobe
+Illustrator. Do your work in any other color and then turn all of your shapes 
+white before exporting to png.
+
+When you export your png, make sure to save it as a 24-bit png file (aka, png-24).
+This will result in a slightly larger file size, but a much more crisp result.
+
+## Upload to SharePoint
+
+With your new, shiny image in hand, it is time to upload it to SharePoint. 
+Upload your image to the **Site Assets** folder of your destination site.
+
+This pattern will be useful when you find that you want to link to this site 
+from multiple locations. 
+
+For example, the ACME company is going to link to a site for their sales 
+department site. They also want to use that tile on their root homepage, on the 
+accounting department's site, and on the PMO's site.
+
+You'll know that the resources you need are always going to be located in the 
+same guessable location: 
+
+~~~url
+[YOUR SHAREPOINT URI]/[PATH TO THE LINK DESTINATION SITE]/SiteAssets/[FILENAME].png
+~~~
+
+ACME's sales department logo would be at: 
+
+~~~url
+http://sharepoint.example.com/ACME/Sales/SiteAssets/sales-icon.png
+~~~
+
+## Create a Promoted List
+
+Navigate to the site you will be linking from and access **Site Contents**. 
+Since ACME is going to be linking to the sales subsite from three different 
+locations (the accounting subsite, the PMO subsite, and the root homepage), 
+they'll have to access Site Contents on each subsite.
+
+~~~url
+http://sharepoint.example.com/ACME/_layouts/15/start.aspx#/_layouts/15/viewlsts.aspx
+http://sharepoint.example.com/ACME/Accounts/_layouts/15/start.aspx#/_layouts/15/viewlsts.aspx
+http://sharepoint.example.com/ACME/PMO/_layouts/15/start.aspx#/_layouts/15/viewlsts.aspx
+~~~
+
+In each Site Contents, select **add an app** and choose **Promoted Links**. 
+Give your list of tiles an appropriate name. ACME might name it "Departments" 
+on the root homepage, "Pipelines" on the accounting subsite, and "Portfolios" 
+on the PMO subsite.
+
+## Populate the Promoted Links List
+
+Navigate to the promoted links list and start adding some links. ACME would be 
+doing this from the following locations:
+
+~~~url
+http://sharepoint.example.com/ACME/_layouts/15/start.aspx#/Lists/Departments/allitems.aspx
+http://sharepoint.example.com/ACME/PMO/_layouts/15/start.aspx#/Lists/Pipelines/allitems.aspx
+http://sharepoint.example.com/ACME/PMO/_layouts/15/start.aspx#/Lists/Portfolios/allitems.aspx
+~~~
+
+Give each new item a **Title**. This will be the text that shows up on the tile
+when a mouse is _not_ hovering over it. ACME would enter "Sales" here.
+
+For the **Background Image Location**, use the URI of the tile image you uploaded
+earlier. Add a description of the image to aid screen readers and other 
+assistive devices.
+
+Any text you enter in the **Description** will be displayed when a mouse overs 
+over the tile. Use this to provide a little bit of information about the 
+destination of the link.
+
+Add the destination URI in the **Link Location**. Give this a description as well.
+
+You can change the way the link will be followed by changing the **Launch Behavior**.
+The **In page navigation** setting is best for most uses and conforms to user 
+expectations about navigation on the web.
+
+The **Order** provides a weighting to the tile to determine its order in the 
+list of tiles.
+
+Hit the **Save** button to add the tile to the list.
+
+## Display the Tiles on a Site Page
+
+Now that you've got a list that contains one (or several) tiles, you need to 
+display the list in a Web Part on a Site Page. 
+
+Navigate to the Site Page that the tiles should appear on and go to **Edit page**
+in the **Settings** cog.
+
+On the **Insert** tab **Parts** group, select **Web Part**.
+
+Select **Apps** in the **Categories**. In **Parts**, select the title of the 
+Promoted Links List you created.
+
+Click the **Add** button to add and display the Promoted Links List.
+
+Save your changes: go to the **Format Text** tab **Edit** group and select 
+**Save**.
+
+## Add More Tiles
+
+To add more tiles, just create and upload a new 24-bit PNG file for the tile 
+image (using our established pattern) and add a new item to the Promoted 
+Links List!
+
+[1]: http://msdn.microsoft.com/en-us/library/office/jj945889(v=office.15).aspx
+[2]: http://www.libpng.org/pub/png/pngfaq.html#png8-png24
