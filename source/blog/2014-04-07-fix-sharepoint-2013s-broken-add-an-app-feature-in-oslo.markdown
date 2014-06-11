@@ -3,6 +3,7 @@ title: Fix SharePoint 2013's Broken &ldquo;Add an App&rdquo; Feature in Oslo
 title_image: tube.min.jpg
 date: 2014-04-07
 tags: SharePoint 2013, Oslo, loading, add an app
+description: Learn how to make Oslo's default Add an App feature work.
 ---
 
 Oslo, one of the default themes in SharePoint 2013 is broken. 
