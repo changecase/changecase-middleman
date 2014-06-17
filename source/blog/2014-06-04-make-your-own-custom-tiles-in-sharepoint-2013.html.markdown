@@ -21,6 +21,31 @@ READMORE
     d3.selectAll("img.sample-tile")
         .style("background-color",  colorValue);
   }
+
+  function changeTileTitle(tileTitle){
+    d3.selectAll("aside .tile-title")
+        .html(tileTitle);
+  }
+
+  function changeTileDescription(tileDescription){
+    d3.selectAll("aside .tile-description")
+        .html(tileDescription);
+  }
+
+  function moveTileUp(amount){
+    d3.selectAll("aside .tile-content")
+        .transition()
+        .duration(500)
+        .style("bottom", amount);
+  }
+
+  function moveTileDown(amount){
+    d3.selectAll("aside .tile-content")
+        .transition()
+        .duration(500)
+        .style("bottom", amount);
+  }
+
 </script>
 
 ## Create the Tile Image
@@ -55,7 +80,7 @@ any color background. Be careful of the very light hues though.
   <input type="color" name="bgcolor" id="bgcolor" value="#aaaaaa" style="float: left; clear: both" oninput="changeBackground(bgcolor.value)">
 </form>
 
-![Sample Tile](/images/services.png){: class="sample-tile" style="background-color: #aaaaaa;" }
+![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile" style="background-color: #aaaaaa;" }
 
 </aside>
 
@@ -141,6 +166,34 @@ The **Order** provides a weighting to the tile to determine its order in the
 list of tiles.
 
 Hit the **Save** button to add the tile to the list.
+
+<aside markdown="1">
+### Preview the Populated Fields ###
+
+Test the title and description!
+
+<form style="float: left; margin-bottom: 1em;">
+  <fieldset style="float:left;">
+    <label for="tileTitle" accesskey="t" markdown="1">**Title**:</label>
+    <input type="text" name="tileTitle" id="tileTitle" value="" style="width:100%;" placeholder="Enter title" oninput="changeTileTitle(tileTitle.value)">
+  </fieldset>
+  <fieldset style="float:left">
+    <label for="tileDescription" accesskey="d" markdown="1">**Description**:</label>
+    <textarea name="tileDescription" id="tileDescription" rows="3" style="width:100%;" oninput="changeTileDescription(tileDescription.value)"></textarea>
+  </fieldset>
+</form>
+
+<div markdown="1" class="tile-group" style="float:left; clear:left; position:relative; overflow:hidden;" onmouseover="moveTileUp('0px')" onmouseout="moveTileDown('-100px')">
+
+![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile" style="background-color: #aaaaaa; float: left;" }
+
+<div class="tile-content" style="position:absolute; bottom:-100px; height:150px; width:150px; padding-left:1em; padding-right:1em; background-color:rgba(0, 0, 0, 0.5); font-family: 'Segoe UI', sans-serif;">
+<h4  class="tile-title" style="color:#ffffff; margin-top:0.5em;"></h4>
+<p   class="tile-description" style="color:#ffffff;"></p>
+</div>
+</div>
+
+</aside>
 
 ## Display the Tiles on a Site Page
 
