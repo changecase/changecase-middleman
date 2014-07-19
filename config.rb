@@ -116,6 +116,11 @@ set :images_dir, 'images'
 set :markdown_engine, :kramdown
 set :markdown, fenced_code_blocks: true, smartypants: true
 
+set :url_root, 'http://changecase.net/'
+activate :search_engine_sitemap
+
+activate :directory_indexes
+
 
 # Build-specific configuration
 configure :build do

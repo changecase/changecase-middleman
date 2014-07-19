@@ -32,7 +32,7 @@
 
     %script{ src: 'http://d3js.org/d3.v3.min.js' }
 
-    - if page_classes != "blog" && page_classes != "work"
+    - if page_classes != "blog blog_index" && page_classes != "work work_index"
       %body{ class: page_classes }
     - else
       %body

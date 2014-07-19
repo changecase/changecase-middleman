@@ -71,6 +71,9 @@ GEM
       middleman-core (>= 3.0.2)
       multi_json (~> 1.0)
       rack-livereload
+    middleman-search_engine_sitemap (1.1.0)
+      builder
+      middleman-core (~> 3.2)
     middleman-sprockets (3.2.0)
       middleman-core (~> 3.2)
       sprockets (~> 2.1)
@@ -131,6 +134,7 @@ DEPENDENCIES
   middleman-deploy (= 0.2.3)
   middleman-disqus (= 0.0.3)
   middleman-livereload (= 3.1.0)
+  middleman-search_engine_sitemap (= 1.1.0)
   middleman-syntax (= 2.0.0)
   nokogiri (= 1.6.1)
   redcarpet (= 3.1.1)
