@@ -38,4 +38,4 @@ I've designed a variety of [custom tiles for SharePoint][custom-tiles] installat
 
 ![software](/images/software.png){: class="tile" }
 
-[custom-tiles]: /blog/2014/06/04/make-your-own-custom-tiles-in-sharepoint-2013.html
+[custom-tiles]: /blog/2014/06/04/make-your-own-custom-tiles-in-sharepoint-2013
