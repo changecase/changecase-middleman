@@ -3,7 +3,10 @@ title: Prevent SharePoint from Rendering Delegate Controls
 title_image: telesiege.min.jpg
 date: 2014-04-14
 tags: SharePoint 2013, SuiteLinksDelegate, Delegate Control
-description: Learn how to prevent SharePoint from displaying Newsfeed, OneDrive, and Sites links in the Suite Bar.
+description: 
+  Learn how to prevent SharePoint from displaying Newsfeed, OneDrive, and Sites 
+  links in the Suite Bar.
+alias: blog/2014/04/14/prevent-sharepoint-from-rendering-delegate-controls.html
 ---
 
 SharePoint 2013 introduces the Suite Bar, a collection of navigation items 

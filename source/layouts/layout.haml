@@ -33,7 +33,10 @@
     %script{ src: 'http://d3js.org/d3.v3.min.js' }
 
     - if page_classes != "blog blog_index" && page_classes != "work work_index"
-      %body{ class: page_classes }
+      - if !page_classes.include? "blog_index"
+        %body{ class: page_classes, itemscope: true, itemType: "http://schema.org/BlogPosting" }
+      - else
+        %body{ class: page_classes }
     - else
       %body
     /[if lt IE 7]
@@ -67,7 +70,10 @@
             %li
               %a.linkedin.icon{ href: 'https://www.linkedin.com/in/changecase', title: 'linkedin' }
             %li
-              %a.googleplus.icon{ href: 'https://plus.google.com/117625331179664688155/posts' }
+              - if page_classes.include? "blog"
+                %a.googleplus.icon{ href: 'https://plus.google.com/117625331179664688155?rel=author' }
+              - else
+                %a.googleplus.icon{ href: 'https://plus.google.com/117625331179664688155/posts' }
             %li
               %a.github.icon{ href: 'https://github.com/changecase' }
             %li

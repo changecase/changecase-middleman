@@ -3,6 +3,9 @@ title: Bike Walk Vote
 title_image: bikeWalkVoteLogo.png
 date: 2011-08-01
 tags: branding, logo, bike walk vote, politics
+alias: 
+  - work/2011/08/01/bike-walk-vote.html
+  - work/2011/08/01/bike-walk-vote-logo.html
 ---
 
 As the Creative Director at [Bike Walk Vote](http://bikewalkvote.org), a political 
@@ -55,9 +58,9 @@ For the mayoral candidate debate held at Portland State University, Bike Walk
 Vote distributed scorecards to help the attendees determine how the candidates
 performed.
 
-![scorecard front](/images/bwv-candidate-stackup-1.min.jpg)
+![scorecard front](/images/bwv-candidate-stackup-1.min.jpg){: width="100%" }
 
-![scorecard back](/images/bwv-candidate-stackup-2.min.jpg)
+![scorecard back](/images/bwv-candidate-stackup-2.min.jpg){: width="100%" }
 
 ## Launch Party Flier
 

@@ -3,6 +3,7 @@ title: Press Release 2013
 title_image: press-report-improved.jpg
 date: 2014-01-03
 tags: report, booklet, advisicon
+alias: [work/2014/01/03/press-releas-2013.html, work/2013/01/03/press-release-2013.html]
 ---
 
 A report including the progress made in 2013 and the vision of the Press 

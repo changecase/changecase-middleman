@@ -6,7 +6,8 @@
     </style>
     
   #article-title
-    %h1= current_resource.data.title
+    %h1{ itemprop: "headline" }= current_resource.data.title
   = find_and_preserve do
-    = yield
+    %div{ itemprop: "articleBody" }
+      = yield
     = disqus

@@ -3,6 +3,7 @@ title: Should Bikes Save the Planet? poster
 title_image: should-bikes-save-the-planet-poster.jpg
 date: 2010-03-03
 tags: mini bike winter, bike, pedalpalooza, bike porn, velo love
+alias: work/2010/03/03/should-bikes-save-the-planet-poster.html
 ---
 
 A poster to advertise the panel discussion opening the Portland Mini Bike 

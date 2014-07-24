@@ -1,6 +1,7 @@
 ---
 
 title: Jeff Jacobson-Swartfager
+alias: about.html
 
 ---
 

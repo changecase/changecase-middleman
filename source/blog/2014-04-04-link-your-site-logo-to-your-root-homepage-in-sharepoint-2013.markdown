@@ -3,6 +3,7 @@ title: Link Your Site Logo to Your Root Homepage in SharePoint 2013
 title_image: logs.min.jpg
 date: 2014-04-04
 tags: SharePoint 2013, master page
+alias: blog/2014/04/04/link-your-site-logo-to-your-root-homepage-in-sharepoint-2013.html
 
 ---
 

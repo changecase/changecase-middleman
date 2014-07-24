@@ -3,6 +3,9 @@ title: InDesign to Ebook&nbsp;&ndash; Duplicated List Symbols
 title_image: studying.min.jpg
 date: 2013-06-20
 tags: InDesign, eBook, ePub, mobi
+alias: 
+  - blog/2013/06/20/indesign-to-ebook-duplicated-list-symbols.html
+  - 2013/06/20/indesign-to-ebook-duplicated-list-symbols.html
 ---
 
 Working on setting up an InDesign book for conversion to ebook formats (ePub 

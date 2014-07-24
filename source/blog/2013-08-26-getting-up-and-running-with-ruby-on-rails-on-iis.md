@@ -3,6 +3,9 @@ title: Getting Up and Running with Ruby on Rails on IIS
 title_image: left.min.jpg
 date: 2013-08-26
 tags: IIS, RoR
+description: Trying to get RoR working on IIS
+alias: blog/2013/08/26/getting-up-and-running-with-ruby-on-rails-on-iss.html
+
 ---
 
 After a mad dash the previous week to compose and deploy a significant number 

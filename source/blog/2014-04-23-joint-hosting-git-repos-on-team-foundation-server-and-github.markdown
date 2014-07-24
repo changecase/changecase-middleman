@@ -3,7 +3,10 @@ title: Joint Hosting Git Repos on Team Foundation Server and Github
 title_image: into_the_fog.min.jpg
 date: 2014-04-23
 tags: git, github, microsoft, team foundation server, tfs, visual studio online
-description: Learn how to use git and Team Foundation Server for hosting your code in multiple repositories.
+description: 
+  Learn how to use git and Team Foundation Server for hosting your code in
+  multiple repositories.
+alias: blog/2014/04/23/joint-hosting-git-repos-on-team-foundation-server-and-github.html
 ---
 
 Sometimes it is useful to host your code repositories in two different places. 

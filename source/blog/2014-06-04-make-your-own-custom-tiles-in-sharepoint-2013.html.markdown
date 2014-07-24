@@ -4,6 +4,7 @@ title_image: dinocar.min.jpg
 date: 2014-06-04
 tags: microsoft, sharepoint, promoted links list, tiles, custom
 description: Learn to build custom tiles in SharePoint 2013 with the Promoted Links list.
+alias: blog/2014/06/04/make-your-own-custom-tiles-in-sharepoint-2013.html
 ---
 
 Creating your own custom tiles is super easy in SharePoint 2013. Organizing 
