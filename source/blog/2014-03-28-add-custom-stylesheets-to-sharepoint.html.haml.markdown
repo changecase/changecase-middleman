@@ -4,7 +4,10 @@ title_image: typewriter_apart.min.jpg
 date: 2014-03-28
 tags: stylesheet, SharePoint 2013, CSS, master page
 description: Learn how to add custom stylesheets to SharePoint 2013 master pages.
-alias: blog/2014/04/28/add-custom-stylesheets-to-sharepoint.html
+alias: 
+  - blog/2014/03/28/add-custom-stylesheets-to-sharepoint.html
+  - blog/2014/04/28/add-custom-stylesheets-to-sharepoint.html
+
 ---
 
 Microsoft's documentation on adding custom stylesheets to a SharePoint site is 

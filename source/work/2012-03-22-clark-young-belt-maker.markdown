@@ -9,6 +9,8 @@ alias: work/2012/03/22/clark-young-belt-maker.html
 Clark Young, a craftsman based in Portland, Oregon needed business cards for 
 his new hand-crafted belt making venture.
 
+READMORE
+
 ![belt card image 01](/images/clark-young-belt-maker-05.min.jpg){: width="100%" }
 
 ![belt card image 02](/images/clark-young-belt-maker-06.min.jpg){: width="100%" }

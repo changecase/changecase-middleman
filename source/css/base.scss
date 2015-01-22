@@ -4,15 +4,26 @@
 
 /* Colors */
 
-$primary-color: #d33;
-$secondary-color: #a00;
-$background-color: #eee;
+$primary-color: #c44;
+$secondary-color: #a33;
+$background-color: #f3f3f3;
 $text-color: #333;
 
 /* Fonts */
 
 $accent-font: "raleway", sans-serif;
 $body-font: "prociono", serif;
+
+/* Typography */
+$base-font-size: 1em; // assume 16px
+$base-line-height: 1.5; 
+$base-height: $base-font-size * $base-line-height;
+
+/* Grid */
+$grid-width: 1000;
+$grid-column-numbers: 12;
+$grid-column-gutter-width: 20;
+$grid-column-width: $grid-width / $grid-column-numbers;
 
 /* ========================================================================
    MIXINS 

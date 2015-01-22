@@ -1,6 +1,8 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
 source 'http://rubygems.org'
+#ruby=ruby-2.1.1
+#ruby-gemset=changecase
 
 gem "middleman", "3.2.2"
 gem "middleman-blog", "3.5.2"
