@@ -6,6 +6,8 @@ tags: InDesign, eBook, ePub, mobi
 alias: 
   - blog/2013/06/20/indesign-to-ebook-duplicated-list-symbols.html
   - 2013/06/20/indesign-to-ebook-duplicated-list-symbols.html
+published: false
+
 ---
 
 Working on setting up an InDesign book for conversion to ebook formats (ePub 

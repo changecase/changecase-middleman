@@ -4,6 +4,8 @@ title_image: wayback.min.jpg
 date: 2013-08-17
 tags: jekyll, dreamhost, heroku
 alias: blog/2013/08/17/jekyll-command-not-found.html
+published: false
+
 ---
 
 [Jekyll][], most of the time you're pretty awesome but sometimes you can be a real son-of-a-bitch.

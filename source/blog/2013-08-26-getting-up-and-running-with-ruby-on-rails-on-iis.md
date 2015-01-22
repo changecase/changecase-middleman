@@ -6,6 +6,7 @@ tags: IIS, RoR
 description: Trying to get RoR working on IIS
 alias: 
   - blog/2013/08/26/getting-up-and-running-with-ruby-on-rails-on-iis.html
+published: false
 
 ---
 
