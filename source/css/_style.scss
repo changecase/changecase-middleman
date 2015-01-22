@@ -41,6 +41,7 @@ body {
   nav a {
     margin: 0 0 0.6em;
     padding: .4em 0 .5em;
+    text-align: center;
   }
 }
 
@@ -273,7 +274,6 @@ aside .social_list {
         display: inline-block; 
         & + li { margin-left: 1em; }
       }
-      a { text-align: center; }
     }
   }
   .main article aside {
