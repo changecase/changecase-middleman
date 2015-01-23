@@ -1,0 +1,38 @@
+@media only screen and (min-width: 480px) {
+
+    nav { 
+      margin-top: 1.5em; 
+      ul, a { width: 100%; }
+      ul, li { float: left; }
+      li {
+        width: 27%;
+        display: inline-block;
+        & + li { margin-left: 1em; }
+      }
+      a {
+        float: left;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+      }
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* IE Fixes */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+

@@ -1,0 +1,56 @@
+@media only screen and (min-width: 768px) { // from main.scss
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+      border-bottom: 2px solid rgba(100,100,120,.5);
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+@media only screen and (min-width: 768px) {
+  .header-container {
+    .title { 
+      font-size: 2.25em; 
+      line-height: #{(48 / 36)}em;
+      width: 60%;
+      margin: #{(10 / 36)}em 0 #{(14 / 36)}em;
+    }
+  }
+  .main article aside {
+    position: absolute;
+    right: 2%;
+    width: 28%;
+    border:0;
+    border-left: 1px solid ($background-color - #111);
+  }
+}
+

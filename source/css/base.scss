@@ -39,8 +39,12 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 }
 
 /* Includes */
-@import "normalize.min";
+@import "normalize.min";                  // normalize browser defaults
 @import "main";
-@import "pygmentize-github";
-@import "font-awesome";
-@import "style";
+@import "pygmentize-github";              // code syntax highlighting
+@import "font-awesome";                   // for symbols & icons
+@import "style";                          // smartphones in portrait mode
+@import "media_query/smartphones";        // in landscape mode
+@import "media_query/tablets";            // in portrait mode
+@import "media_query/desktops";           // & laptops, standard size
+@import "media_query/print";              // printed
