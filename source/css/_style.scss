@@ -4,9 +4,6 @@ body {
   background-color: $background-color; 
   font-family: $body-font;
 }
-.main-container { 
-  //line-height: 1.75;  // Probably not neccessary.
-}
 
 /* header */
 
@@ -40,11 +37,22 @@ body {
       }
     }
   }
-  nav a {
-    margin: 0 0 0.6em;
-    padding: .4em 0 .5em;
-    text-align: center;
-    &:hover, &:focus, &:active { border: none; }
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      color: $background-color;
+      background: $secondary-color;
+      margin: 0 0 0.6em;
+      padding: .4em 0 .5em;
+      text-align: center;
+      &:hover, &:focus, &:active { border: none; }
+    }
   }
 }
 
@@ -74,7 +82,7 @@ a {
 
 .main article {
   padding-bottom: 1em;
-  header h1 {
+  header h1, h1 {
     font-size: 2.25em;
     line-height: 2;
     padding-bottom: .02em;
@@ -251,7 +259,9 @@ blockquote {
   color: $background-color; 
   margin-top: .1em;
   border-top: .525em solid $secondary-color;
-  padding-bottom: 1.125em;
+  padding: 0 5% 1.125em;
+  float: right;
+  width: 90%;
   h3 {
     font-size: 1em;
     line-height: 1.5em;
@@ -293,6 +303,20 @@ aside .social_list {
 /* footer */
 
 .footer-container {
-    border-top: .525em solid $secondary-color;
-    margin-top: 2.5em;
+  border-top: .525em solid $secondary-color;
+  margin-top: 2.5em;
+  footer {
+    color: $primary-color + ($background-color * .6);
+    padding: 1.5em 0;
+    h3 { 
+      font-size: .75em; 
+      padding: 0;
+      margin: 0;
+      letter-spacing: .5px;
+    }
+  }
+}
+
+.ie7 .title { // IE fix from main.scss
+    padding-top: 20px;
 }

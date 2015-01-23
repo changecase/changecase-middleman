@@ -87,92 +87,16 @@ body {
     color: white;
 }
 
-/* ==============
-    MOBILE: Menu
-   ============== */
-
-nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: white;
-    background: $secondary-color;
-}
-
-nav a:hover,
-nav a:visited {
-    color: white;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ==============
-    MOBILE: Main
-   ============== */
-
-.main {
-    padding: 30px 0;
-}
-
-.main article h1 {
-    font-size: 2em;
-}
-
-.main aside {
-    color: white;
-    padding: 0px 5% 10px;
-    float: right;
-    width: 90%;
-}
-
-.footer-container footer {
-    color: white;
-    padding: 20px 0;
-}
-
-/* ===============
-    ALL: IE Fixes
-   =============== */
-
-.ie7 .title {
-    padding-top: 20px;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-.ir {
+// Image replacement. 
+//
+// Replace element contents with an image by applying/extending/including this 
+// class. Make sure to apply the background-image, width, and height properties 
+// to the element though.
+.ir { 
     background-color: transparent;
     border: 0;
     overflow: hidden;
@@ -186,11 +110,18 @@ nav a:hover {
     height: 150%;
 }
 
+// Hide element
+//
+// Make sure that this element doesn't appear for presentations and screen 
+// readers. Hiding/populating this element should probably be done with javascript.
 .hidden {
     display: none !important;
     visibility: hidden;
 }
 
+// Hide element from browsers
+// 
+// Hide from browsers, but display for screen readers.
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -212,10 +143,16 @@ nav a:hover {
     width: auto;
 }
 
+// Hide without affecting layout.
+//
+// Unlike `display: none`, this will keep the element in the flow.
 .invisible {
     visibility: hidden;
 }
 
+// Clearfix
+//
+// For floats. Make a parent fully contain its floated children.
 .clearfix:before,
 .clearfix:after {
     content: " ";
