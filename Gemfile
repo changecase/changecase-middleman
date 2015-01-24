@@ -27,3 +27,7 @@ gem "wdm", "0.1.0", platforms: [:mswin, :mingw]
 
 # Deploying plugin
 gem "middleman-deploy", "0.2.3"
+
+group :development, :test do
+  gem "jasmine", "2.1.0" # JavaScript testing framework
+end

@@ -13,3 +13,5 @@ namespace :deploy do
     deploy :production
   end
 end
+require 'jasmine'
+load 'jasmine/tasks/jasmine.rake'
