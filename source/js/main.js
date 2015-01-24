@@ -1,1 +1,1 @@
-
+//= require "_paralax"
