@@ -7,7 +7,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
       var yPos = -($(window).scrollTop() / 3 );
       var height = $('#article-title').height();
-      var coords = '50% ' + (50 - (yPos / 2)) + '%';
+      var coords = '50% ' + (50 - (yPos / 20)) + '%';
 
       $bgobj.css({ backgroundPosition: coords });
     });

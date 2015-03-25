@@ -12,6 +12,8 @@ alias:
   - journal/2009/05/12_narrowed_to_one_concept.html
 change_frequency: weekly
 ---
+
+<h1>Blog</h1>
 - if paginate && num_pages > 1 
   <p>Page #{ page_number } of #{ num_pages }</p>
 
@@ -19,11 +21,13 @@ change_frequency: weekly
     <p>#{ link_to 'Previous page', prev_page }</p>
 
 - page_articles.each_with_index do |article, i| 
+  <section>
   <h2>#{ link_to article.title, article } <span>#{ article.date.strftime('%b %e') }</span></h2>
   -#
     use article.summary(250) if you have Nokogiri available to show just
     the first 250 characters
   = article.summary(250) 
+  </section>
 
 - if paginate 
   - if next_page 

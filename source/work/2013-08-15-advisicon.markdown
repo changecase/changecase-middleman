@@ -8,7 +8,6 @@ alias: work/2013/08/15/advisicon.html
 
 At [Advisicon](http://advisicon.com), I handled the design of both internal and 
 external communications.
-
 READMORE
 
 ## Advisicon Fun Day 2013
