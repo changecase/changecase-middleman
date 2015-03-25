@@ -21,8 +21,8 @@ and ebook formats.
 
 I also led the development and maintenance of the Advisicon family of websites:
 [advisicon.com](http://advisicon.com) (a static site built off of Sinatra in
-HAML, LESS, and jQuery), [the Advisicon blog] (http://blog.advisicon.com) (a
-Wordpress site), and [the Advisicon store] (http://store.advisicon.com) (a
+HAML, LESS, and jQuery), [the Advisicon blog](http://blog.advisicon.com) (a
+Wordpress site), and [the Advisicon store](http://store.advisicon.com) (a
 Shopify site). I led and performed the user experience design, testing, and
 user research of the soon to be released redesigned Advisicon website. This
 website has been prototyped in Middleman and makes use of SCSS, jQuery, and
