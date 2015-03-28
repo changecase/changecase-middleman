@@ -1,0 +1,90 @@
+// The header container. Used to wrap the header contents (including
+// the site's global <header>.
+// INVESTIGATE: Is this extra wrapper even neccessary?
+.header-container { 
+  font-family: $accent-font; 
+  border-bottom-width: .25em;
+  a {
+    &:link    { color: $background-color; }
+    &:visited { color: $background-color; }
+    &:hover, 
+    &:focus, 
+    &:active   { 
+      color: $secondary-color + $text-color; 
+      background-color: $secondary-color + $background-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Site logo styles.
+.header-container .title { 
+    font-size: 1.5em; 
+    line-height: 48px;
+    margin: 0;
+    float: left;
+    a {
+      text-indent: -5000px;
+      background: transparent image-url('logo.svg') no-repeat 0% 50%;
+      background-size: 248px;
+      width: 248px;
+      float: left;
+      &:hover, 
+      &:focus, 
+      &:active { 
+        color:$background-color; 
+        background-color: $primary-color; 
+        background-image: image-url('logo-active.svg');
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  // Site navigation
+    // When collapsed
+  .header-container nav.collapse {
+    ul { display: none; }
+    // BEGIN mobile first injection
+    clear: none;
+    margin-top: 0;
+    height: 48px;
+    width: 36px;
+    @extend .fa;
+    @extend .fa-bars;
+    float: right;
+    font-size: 2.618em;
+    line-height: 48px;
+    &::before { 
+      float: right; 
+      color: $background-color;
+    }
+    &:hover::before {
+      color: $secondary-color;
+    }
+    // END mobile first injection
+  }
+
+    // When expanded
+  .header-container nav {
+    clear: left;
+    margin-top: 4.5em;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      color: $background-color;
+      background: $secondary-color;
+      margin: 0 0 0.6em;
+      padding: .4em 0 .5em;
+      text-align: center;
+      &:hover, &:focus, &:active { border: none; }
+    }
+  }
+
+

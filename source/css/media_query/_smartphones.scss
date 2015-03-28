@@ -1,5 +1,15 @@
 @media only screen and (min-width: 480px) {
 
+  .header-container .title {
+    line-height: 2; // ??? Keep this?
+    margin: 0 0 1em; // ??? Use this for non-mobile?
+    a:active {
+      border-color: $secondary-color;
+      padding-bottom: .125em;
+      margin-bottom: -.125em;
+    }
+  }
+
     nav { 
       margin-top: 1.5em; 
       ul, a { width: 100%; }

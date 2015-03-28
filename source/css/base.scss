@@ -6,6 +6,9 @@
 
 $primary-color: #c44;
 $secondary-color: #a33;
+$tertiary-color: #c9a54e;
+$quaternary-color: #185277;
+$quinary-color: #31acad;
 $background-color: #f3f3f3;
 $text-color: #333;
 
@@ -15,15 +18,15 @@ $accent-font: "raleway", sans-serif;
 $body-font: "prociono", serif;
 
 /* Typography */
-  // /* Scale */                                                                                                                                                                                            
-  // 0.236em                                                                                                                                                                                                
-  // 0.382em                                                                                                                                                                                                
-  // 0.618em                                                                                                                                                                                                
-  // 1em                                                                                                                                                                                                    
-  // 1.618em                                                                                                                                                                                                
-  // 2.618em                                                                                                                                                                                                
-  // 4.236em                                                                                                                                                                                                
-  // 6.854em      
+  // /* Scale */
+  // 0.236em    
+  // 0.382em    
+  // 0.618em    
+  // 1em
+  // 1.618em    
+  // 2.618em    
+  // 4.236em    
+  // 6.854em
 $base-font-size: 1em; // assume 16px
 $base-line-height: 1.5; 
 $base-height: $base-font-size * $base-line-height;
@@ -53,6 +56,7 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 @import "pygmentize-github";              // code syntax highlighting
 @import "font-awesome";                   // for symbols & icons
 @import "style";                          // smartphones in portrait mode
+@import "base_header";
 @import "media_query/smartphones";        // in landscape mode
 @import "media_query/tablets";            // in portrait mode
 @import "media_query/desktops";           // & laptops, standard size

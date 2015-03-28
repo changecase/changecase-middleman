@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   $('#article-title').each(function() {
-    console.log('success');
     var $bgobj = $(this);
 
     $(window).scroll(function() {
