@@ -50,6 +50,14 @@ $grid-column-width: $grid-width / $grid-column-numbers;
   background: linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);
 }
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 /* Includes */
 @import "normalize.min";                  // normalize browser defaults
 @import "main";
@@ -57,7 +65,15 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 @import "font-awesome";                   // for symbols & icons
 @import "style";                          // smartphones in portrait mode
 @import "base_header";
-@import "media_query/smartphones";        // in landscape mode
-@import "media_query/tablets";            // in portrait mode
-@import "media_query/desktops";           // & laptops, standard size
-@import "media_query/print";              // printed
+@import "feat_section";
+ul.feat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ul.feat li { float: left; }
+// @import "media_query/smartphones";        // in landscape mode
+// @import "media_query/tablets";            // in portrait mode
+// @import "media_query/desktops";           // & laptops, standard size
+// @import "media_query/print";              // printed

@@ -1,0 +1,49 @@
+.featured {
+  height: 100vh;
+  width: 111%;
+  background: #333 image-url('left.min.jpg') no-repeat 0 0;
+  background-size: cover;
+  margin: -1.25em -5.5% 0;
+  position: relative;
+  .callout {
+    margin: 0 5%;
+    padding: 0 5%;
+    @include vertical-align;
+    color: $background-color;
+    font-kerning: normal;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: .0625em;
+      text-shadow: 1px 1px 0 rgba(101,101,101,0.75);
+    }
+  }
+  @extend .fa;
+  @extend .fa-angle-down;
+  &::before {
+    position: absolute;
+    bottom: 1em;
+    font-size: 4em;
+    color: $background-color;
+    text-shadow: 1px 1px 0 rgba(101,101,101,0.75);
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.featured a.cta {
+  display: inline-block;
+  background-color: $primary-color;
+  background-color: rgba($primary-color,0.5);
+  padding: 1em;
+  -webkit-border-radius: 300px;
+  border-radius: 300px;
+  color: #fff;
+  z-index:101;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgba($primary-color,1);
+    border: none;
+    margin-bottom: 0;
+  }
+}
