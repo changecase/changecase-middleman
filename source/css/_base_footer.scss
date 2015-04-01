@@ -1,0 +1,22 @@
+/* footer */
+
+.footer-container {
+//  border-top: .525em solid $secondary-color;
+//  margin-top: 2.5em;
+  footer {
+    color: $primary-color + ($background-color * .6);
+    padding: 1.5em 0;
+    h3 { 
+      font-size: 1em; 
+      padding: 0;
+      margin: 0;
+      letter-spacing: .5px;
+    }
+    p { 
+      font-size: .618em;
+      line-height: 1.618;
+      font-family: $accent-font;
+    }
+  }
+}
+

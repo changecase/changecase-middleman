@@ -92,11 +92,18 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 @import "main";
 @import "pygmentize-github";              // code syntax highlighting
 @import "font-awesome";                   // for symbols & icons
+@import "utilities";                      // Sass utilities
 @import "style";                          // smartphones in portrait mode
 @import "base_header";
 @import "feat_section";
 @import "feat_icon";
+@import "base_footer";
 // @import "media_query/smartphones";        // in landscape mode
+@media screen and (min-width: 480px) {
+  ul.feat {
+    flex-wrap: nowrap;
+  }
+}
 // @import "media_query/tablets";            // in portrait mode
 // @import "media_query/desktops";           // & laptops, standard size
 // @import "media_query/print";              // printed

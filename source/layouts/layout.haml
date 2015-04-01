@@ -73,8 +73,11 @@
         %article 
           = yield 
 
+
+    .footer-container
+      %footer.wrapper
         %aside
-          %h3 Jeff on the Web
+          %h3 Social
           %ul.social_list
             %li
               %a.twitter.icon{ href: 'https://twitter.com/changecase', title: 'twitter' }
@@ -93,10 +96,7 @@
               %a.instagram.icon{ href: 'http://instagram.com/jeff_ja' }
             %li
               %a.flickr.icon{ href: 'https://www.flickr.com/photos/changecase' }
-
-    .footer-container
-      %footer.wrapper
-        %h3 Jeff Jacobson-Swartfager &copy; #{Date.today.year.to_s}
+        %p Jeff Jacobson-Swartfager &copy; #{Date.today.year.to_s}
 
     %script{ src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js' }
     %script

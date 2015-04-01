@@ -44,7 +44,7 @@
 
   // Site navigation
     // When collapsed
-  .header-container nav.collapse {
+  .header-container nav.collapsed {
     ul { display: none; }
     // BEGIN mobile first injection
     clear: none;
@@ -57,6 +57,7 @@
     font-size: 2.618em;
     line-height: 48px;
     &::before { 
+      position: relative;
       float: right; 
       color: $background-color;
     }
@@ -66,7 +67,7 @@
     // END mobile first injection
   }
 
-    // When expanded
+    // When default
   .header-container nav {
     clear: left;
     margin-top: 4.5em;
@@ -87,4 +88,21 @@
     }
   }
 
+  // when expanded
+  .header-container i {
+    @extend .fa;
+    @extend .fa-times;
+    display: block; // override .fa
+    &::before { 
+      position: absolute;
+      top: 0;
+      right: 5%;
+      color: $background-color;
+      font-size: 2.618em;
+      line-height: 48px;
+    }
+    &:hover::before {
+      color: $secondary-color;
+    }
+  }
 
