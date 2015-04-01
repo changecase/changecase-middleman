@@ -39,6 +39,12 @@
   border-radius: 300px;
   color: #fff;
   z-index:101;
+  @include transitions( 
+    $properties:      background-color, 
+    $duration:        0.25s, 
+    $timing-function: ease, 
+    $delay:           0s
+  );
   &:hover,
   &:active,
   &:focus {

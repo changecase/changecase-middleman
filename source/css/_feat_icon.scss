@@ -1,0 +1,114 @@
+// BEGIN Temporary: distributes the icons evenly (horizontally) in 
+// modern, wider browsers.
+ul.feat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ul.feat li { float: left; }
+// END Temporary
+
+// Front page nav icons
+ul.feat { padding: 0; }
+ul.feat li { 
+  display: block; 
+  width: 100%;
+  max-width: 400px;
+}
+.feat-icon {
+  display: block;
+  height: 360px;
+  width:  100%;
+  position: relative;
+  text-indent: -5000px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px;
+  @include transitions( 
+    $properties:(
+      -webkit-filter, -moz-filter, -ms-filter, filter,
+      background-color, color
+    ), 
+    $duration: 0.25s, 
+    $timing-function: ease, 
+    $delay: 0s);
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    @include saturation(100%);
+    &::before {
+      text-indent: 0;
+      line-height: 360px;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      font-family: raleway;
+      font-size: 2em;
+      font-weight: bold;
+      color: $background-color;
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+    }
+    &::after {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(100,100,100,0.5);
+      display: block;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.feat-icon.work {
+  background-color: $tertiary-color; 
+  background-image: image-url('protractor.svg');
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background-color - #555;
+    &::before {
+      content: "Work";
+    }
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.feat-icon.blog {
+  background-color: $quaternary-color; 
+  background-image: image-url('pencil.svg');
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background-color - #555;
+    &::before {
+      content: "Blog";
+    }
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.feat-icon.about {
+  background-color: $quinary-color; 
+  background-image: image-url('logo-icon.svg');
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $background-color - #555;
+    &::before {
+      content: "About";
+    }
+    &::after {
+      content: "";
+    }
+  }
+}
