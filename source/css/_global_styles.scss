@@ -1,0 +1,24 @@
+/* global */
+
+body { 
+  background-color: $background-color; 
+  font-family: $body-font;
+}
+h2 {
+  margin: 1.45em 0 -0.5em;
+  line-height: 2;
+}
+h3 {
+  margin-top: 1em;
+  line-height: 1.16999995708465;
+}
+p {
+  margin: 1.5em 0 1.25em;
+}
+
+
+
+.ie7 .title { // IE fix from main.scss
+    padding-top: 20px;
+}
+

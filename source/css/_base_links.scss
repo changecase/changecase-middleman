@@ -1,0 +1,17 @@
+/* links */
+
+a {
+  text-decoration: none;
+  &:link    { color: $primary-color; }
+  &:visited { color: $secondary-color; }
+  &:hover   { color: $text-color; }
+  &:active  { color: 2*$text-color; }
+  &:hover,
+  &:active,
+  &:focus   { 
+    border-bottom: 2px solid ( 3*$text-color ); 
+    padding-bottom: 1px;
+    margin-bottom: -3px;
+  }
+}
+

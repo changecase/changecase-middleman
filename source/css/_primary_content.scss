@@ -1,0 +1,32 @@
+/* primary content */
+.main {
+  padding: 0; 
+  margin: 0 auto;
+}
+
+.main article {
+  padding-bottom: 1em;
+  header h1, h1 {
+    $font-size: $base__font-size * 2.618;
+    font-size: $font-size;
+    line-height: ( ($base__line-height * 3) / ($font-size) );
+    padding: 0;
+    margin: em( 22px, $font-size ) 0 0;
+//    padding-bottom: .02em;
+//    margin-bottom: .65em
+  }
+  section + header h1 { margin-top: 2.5em; }
+  section + section { margin-top: 2.5625em; }
+  section h2 {
+    font-size: 1.5em;
+    line-height: 2;
+    margin: 0 0 1.275em;
+    padding: .7em 0 .3em;
+  }
+  section p,
+  section ol,
+  section ul {
+    margin: 1.5em 0 1.125em;
+  }
+}
+

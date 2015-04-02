@@ -1,0 +1,17 @@
+ /* Social icons */
+
+.icon {
+  float: left;
+  display: block;
+  @extend .fa;
+  @extend .fa-lg;
+  &.twitter    { @extend .fa-twitter; }
+  &.linkedin   { @extend .fa-linkedin; }
+  &.googleplus { @extend .fa-google-plus; }
+  &.github     { @extend .fa-github; }
+  &.foursquare { @extend .fa-foursquare; }
+  &.instagram  { @extend .fa-instagram; }
+  &.flickr     { @extend .fa-flickr; }
+  &.facebook   { @extend .fa-facebook; }
+}
+

@@ -14,8 +14,13 @@ $text-color: #333;
 
 /* Fonts */
 
-$accent-font: "raleway", sans-serif;
-$body-font: "prociono", serif;
+$accent-font: "raleway", sans-serif; // Raleway: 400, 700
+$body-font: "prociono", serif; // Prociono: 400
+
+/* Weights */
+
+$regular: 400;
+$bold:    700;
 
 /* Typography */
   // /* Scale */
@@ -27,9 +32,9 @@ $body-font: "prociono", serif;
   // 2.618em    
   // 4.236em    
   // 6.854em
-$base-font-size: 1em; // assume 16px
-$base-line-height: 1.5; 
-$base-height: $base-font-size * $base-line-height;
+$base__font-size: 16px; // assume 16px
+$base__line-height: 24px; 
+$base__height: $base__line-height / $base__font-size;
 
 /* Grid */
 $grid-width: 1000;
@@ -88,12 +93,22 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 }
 
 /* Includes */
+@import "utilities";                      // Sass utilities
 @import "normalize.min";                  // normalize browser defaults
 @import "main";
 @import "pygmentize-github";              // code syntax highlighting
 @import "font-awesome";                   // for symbols & icons
-@import "utilities";                      // Sass utilities
-@import "style";                          // smartphones in portrait mode
+
+@import "global_styles";                  // basic, global styling
+
+@import "base_links";                     // Base link styles
+@import "primary_content";                // primary content: needs editing
+@import "base_blog_post";                 // Base styles for blog posts, 
+                                          // articles, and other serialized 
+                                          // content.
+@import "code_syntax_highlighting";       // Syntax highlighting tweeks. Depends on pygmentize-github
+@import "social_icons";                   // for social network icons
+@import "sec_content";                    // secondary content: needs editing
 @import "base_header";
 @import "feat_section";
 @import "feat_icon";

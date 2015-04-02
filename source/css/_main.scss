@@ -11,8 +11,8 @@ textarea {
 }
 
 body {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+    font-size: $base__font-size;
+    line-height: $base__height;
 }
 
 ::-moz-selection {
@@ -61,7 +61,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: #{$base-font-size}/#{$base-line-height} Helvetica, Helvetica Neue, Arial;
+    font: #{em($base__font-size)}/#{$base__height} Helvetica, Helvetica Neue, Arial, sans-serif;
 }
 
 .wrapper {
