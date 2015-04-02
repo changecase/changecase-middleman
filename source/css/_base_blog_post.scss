@@ -1,35 +1,14 @@
 /* articles */
 
-#article-title { font-family: $accent-font; }
+#article-title,
+h1, h2, h3, h4, h5, h6,
+strong                    { font-family: $accent-font; }
 
-h1, h2, h3, h4, h5, h6 { font-family: $accent-font; }
-
-strong { font-family: $accent-font; }
-
-.main article {
-  .blog, .work {
-    h1 { 
-      margin-top: 1em;
-      margin-bottom: 1.825em; 
-      line-height: 1.3333333333333333333333333333333333333333333333;
-    }
-    h2 {
-      line-height: 2;
-      margin: 1.45em 0 -.45em;
-    }
-    h3 {
-      margin-top: 1.22863252369845em;
-      line-height: 1.28205132907665;
-    }
-//    p {
-//      margin: 1.5em 0 1.25em;
-//    }
-  }
+.main article section h2 span {  // The date on the blog post list
+  display: inline-block; 
 }
 
-.main article section h2 span { display: inline-block; }
-.main article h1 + p { margin-top: 1.875em; }
-
+// Portfolio
 .main article .portfolio_item {
   height: 6em;
   background-repeat: no-repeat;
@@ -39,24 +18,15 @@ strong { font-family: $accent-font; }
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-  margin-left:  -5px;
-  padding-left:  5px;
-  margin-right: -5px;
-  padding-right: 5px;
-  margin-bottom: 1.5em;
+  margin: 0 -5px 1.5em;
+  padding: 0 5px;
   h2 {
     line-height: 1;
     margin: 0 -5px;
     padding: 0.2em 5px 0.3em;
-  }
-  &:after {
-    height: 6em;
-    content: "";
-    position: absolute;
-    display: block;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC45Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    @include vertical-linear-gradient(rgba(0,0,0,0), 0%, rgba(0,0,0,0.9), 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000000', endColorstr='#e6000000', GradientType-0);
+    background-color: #f30000;
+    background-color: rgba(243,0,0,.5);
+    color: $background-color;
   }
   &:hover, &:active, &:focus {
     h2 {
@@ -64,15 +34,6 @@ strong { font-family: $accent-font; }
       background-color: $background-color;
       background-color: rgba(243,243,243,.95);
     }
-  }
-  h2 {
-    background-color: #f30000;
-    background-color: rgba(243,0,0,.5);
-    margin-left:  -5px;
-    padding-left:  5px;
-    margin-right: -5px;
-    padding-right: 5px;
-    color: $background-color;
   }
 }
 
