@@ -43,20 +43,16 @@ pre.lineno { margin: 0px; }
 
 div.highlight { 
   background-color: $background-color + #111; 
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-   -khtml-border-radius: 5px;
+  @include border-radius(5px);
 }
 
 code {
+  font-family: $mono-font;
+  font-size: 0.9062em;
   background-color: $background-color + #111;
   padding: .125em;
   margin: -.125em 0;
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-   -khtml-border-radius: 5px;
+  @include border-radius(5px);
  }
 
 blockquote { 

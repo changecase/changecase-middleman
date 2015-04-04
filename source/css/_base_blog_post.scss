@@ -37,3 +37,17 @@ strong                    { font-family: $accent-font; }
   }
 }
 
+// Blog
+[itemprop="articleBody"] {
+  // Get the first line of text to sit on the baseline
+  padding-top: em(8px); 
+}
+
+.blog {
+  ul {
+    margin: 0;
+  }
+  li:first-child {
+    margin-top: em(24px);
+  }
+}
