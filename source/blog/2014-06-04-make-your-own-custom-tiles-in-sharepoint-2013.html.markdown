@@ -17,38 +17,6 @@ will look like Microsoft made your icon!
 
 READMORE
 
-<script>
-  function changeBackground(colorValue){ 
-    d3.selectAll("img.sample-tile")
-        .style("background-color",  colorValue);
-  }
-
-  function changeTileTitle(tileTitle){
-    d3.selectAll("aside .tile-title")
-        .html(tileTitle);
-  }
-
-  function changeTileDescription(tileDescription){
-    d3.selectAll("aside .tile-description")
-        .html(tileDescription);
-  }
-
-  function moveTileUp(amount){
-    d3.selectAll("aside .tile-content")
-        .transition()
-        .duration(500)
-        .style("bottom", amount);
-  }
-
-  function moveTileDown(amount){
-    d3.selectAll("aside .tile-content")
-        .transition()
-        .duration(500)
-        .style("bottom", amount);
-  }
-
-</script>
-
 ## Create the Tile Image
 
 Let's start with some assumptions:
