@@ -178,6 +178,5 @@ end
 
 # Allow sprockets to use bower
 sprockets.append_path File.join root, 'bower_components'
-sprockets.import_asset 'kerneljs'
 
 activate :alias

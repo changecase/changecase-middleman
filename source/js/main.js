@@ -1,4 +1,3 @@
-//= require "kerneljs"
 //= require "vendor/modernizr-2.6.2-respond-1.1.0.min.js"
 
 //= require "utilities/_check_browser_width"
@@ -8,3 +7,7 @@
 //= require "_typekit"
 
 //= require "blog/_sharepoint_custom_tiles"
+
+$( document ).ready(function() {
+  paralax.articleHeader();
+});
