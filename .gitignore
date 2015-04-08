@@ -22,3 +22,6 @@
 
 # Ignore temporary img folder
 img/
+
+# Ignore bower
+bower_components/
