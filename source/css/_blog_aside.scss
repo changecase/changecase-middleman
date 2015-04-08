@@ -1,0 +1,53 @@
+form[name="tileBackgroundColor"] {
+  float: left;
+  margin-bottom: 1em;
+  label {
+    float: left;
+    max-width: 75%;
+  }
+  input {
+    float: left;
+    clear: both;
+  }
+}
+
+form[name="fieldPreview"] {
+  float: left;
+  margin-bottom: 1em;
+  fieldset { 
+    float: left; 
+    width: 100%;
+  }
+  input,
+  textarea { width: 100%; }
+}
+
+.tile-group {
+  float: left;
+  clear: left;
+  position: relative;
+  overflow: hidden;
+  p {margin: 0;}
+  .tile-content {
+    position: absolute;
+    top: 100px;
+    height: 150px;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgba(0,0,0, 0.5);
+    font-family: 'Segoe UI', sans-serif;
+    .tile-title {
+      color: #fff;
+      margin-top: 0.5em;
+    }
+    .tile-description {
+      color: #fff;
+    }
+  }
+}
+
+img.sample-tile { 
+  float: left; 
+  background-color: #aaa;
+}
