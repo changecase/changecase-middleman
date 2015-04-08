@@ -44,12 +44,14 @@ your theme's `TileBackgroundOverlay` slot to show through. Use white (hex color
 By using transparent pixels in a 24-bit PNG, the tile will work on just about 
 any color background. Be careful of the very light hues though.
 
-<form style="float: left; margin-bottom: 1em;">
-  <label for="bgcolor" accesskey="c" markdown="1" style="float:left; max-width:75%;">**Change the background color of the tile**:</label>
-  <input type="color" name="bgcolor" id="bgcolor" value="#aaaaaa" style="float: left; clear: both" oninput="changeBackground(bgcolor.value)">
+<form name="tileBackgroundColor" class="sharepoint-tile-settings">
+  <label for="bgcolor" accesskey="c" markdown="1">**Change the background color of the tile**:</label>
+  <input type="color" name="bgcolor" id="bgcolor" value="#aaaaaa" oninput="sharepointTile.backgroundColor(bgcolor.value)">
 </form>
 
-![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile" style="background-color: #aaaaaa;" }
+<div markdown="1" class="tile-group sharepoint-tile">
+![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile" }
+</div>
 
 </aside>
 
@@ -141,24 +143,23 @@ Hit the **Save** button to add the tile to the list.
 
 Test the title and description!
 
-<form style="float: left; margin-bottom: 1em;">
-  <fieldset style="float:left;">
+<form name="fieldPreview" class="sharepoint-tile-settings">
+  <fieldset>
     <label for="tileTitle" accesskey="t" markdown="1">**Title**:</label>
-    <input type="text" name="tileTitle" id="tileTitle" value="" style="width:100%;" placeholder="Enter title" oninput="changeTileTitle(tileTitle.value)">
+    <input type="text" name="tileTitle" id="tileTitle" value="" placeholder="Enter title" oninput="sharepointTile.header(tileTitle.value)">
   </fieldset>
-  <fieldset style="float:left">
+  <fieldset>
     <label for="tileDescription" accesskey="d" markdown="1">**Description**:</label>
-    <textarea name="tileDescription" id="tileDescription" rows="3" style="width:100%;" oninput="changeTileDescription(tileDescription.value)"></textarea>
+    <textarea name="tileDescription" id="tileDescription" rows="3" oninput="sharepointTile.description(tileDescription.value)"></textarea>
   </fieldset>
 </form>
 
-<div markdown="1" class="tile-group" style="float:left; clear:left; position:relative; overflow:hidden;" onmouseover="moveTileUp('0px')" onmouseout="moveTileDown('-100px')">
+<div markdown="1" class="tile-group sharepoint-tile">
+![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile"}
 
-![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile" style="background-color: #aaaaaa; float: left;" }
-
-<div class="tile-content" style="position:absolute; bottom:-100px; height:150px; width:150px; padding-left:1em; padding-right:1em; background-color:rgba(0, 0, 0, 0.5); font-family: 'Segoe UI', sans-serif;">
-<h4  class="tile-title" style="color:#ffffff; margin-top:0.5em;"></h4>
-<p   class="tile-description" style="color:#ffffff;"></p>
+<div class="tile-content">
+<h4  class="tile-title"></h4>
+<p   class="tile-description"></p>
 </div>
 </div>
 
