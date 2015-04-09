@@ -1,20 +1,29 @@
-var paralax = (function () {
-  var exp = {};
+(function (exp) {
 
-  exp.articleHeader = function() {
-    $('#article-title').each(function() {
-      var $bgobj = $(this);
+  var position = function(h,y) {
+    var x = '50% ';
+    return x + ((h / (h - y)) * 100) / 2 + '%';
+  };
 
-      $(window).scroll(function() {
-        var yPos = -($(window).scrollTop() / 3 );
-        var height = $('#article-title').height();
-        var coords = '50% ' + (50 - (yPos / 20)) + '%';
+  exp.element = function(element) {
+    var $_bgobj = $( element );
+    var height, yPos, coords;
 
-        $bgobj.css({ backgroundPosition: coords });
-      });
+    height = $_bgobj.height();
+    yPos = 0;
+    coords = position(height, yPos);
+    $_bgobj.css({ backgroundPosition: coords });
+
+    $(window).scroll(function() {
+      yPos = $(window).scrollTop();
+      if (yPos < (height / 2)) {
+        coords = position(height, yPos);
+      }
+
+      $_bgobj.css({ backgroundPosition: coords });
     });
+
   };
 
   return exp;
-}());
-
+})(this.paralax = {});
