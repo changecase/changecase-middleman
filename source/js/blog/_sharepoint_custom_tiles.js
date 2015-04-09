@@ -1,10 +1,4 @@
-// var tile = {
-//   height: $( '.sample-tile' ).height(),
-//   width:  $( '.sample-tile' ).width()
-// };
-
-var sharepointTile = (function () {
-  var sp = {};
+(function (sp) {
   $( '.tile-group' )
     .on( 'mouseover', function(){
       sharepointTile.moveTileUp('0px');
@@ -37,6 +31,5 @@ var sharepointTile = (function () {
       }, 500, function(){});
   };
 
-  return sp;
-}());
+})(this.sharepointTile = {});
 

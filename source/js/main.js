@@ -1,6 +1,6 @@
+//= require "vendor/jquery-1.10.1.min.js"
 //= require "vendor/modernizr-2.6.2-respond-1.1.0.min.js"
 
-//= require "utilities/_check_browser_width"
 //= require "_paralax"
 //= require "_top_nav"
 //= require "_feat_section"
@@ -9,5 +9,15 @@
 //= require "blog/_sharepoint_custom_tiles"
 
 $( document ).ready(function() {
-  paralax.articleHeader();
+  // utilities
+  topNav.toggle('.header-container nav');
+
+  // index
+  featuredSection.bgImage('data-image');
+
+  // all articles
+  paralax.element('#article-title');
+
+  // unique pages
+    //sharepointTile();
 });

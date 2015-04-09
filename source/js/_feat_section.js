@@ -1,15 +1,12 @@
 (function(section) {
 
-  section.bgImage = function() {
+  section.bgImage = function(imgName) {
     $( '.featured' ).css( 'background-image', function() {
       console.log('load');
-      return 'url("/images/' + $( this ).attr('data-image') + '")';
+      return 'url("/images/' + $( this ).attr(imgName) + '")';
     });
   };
 
 
-})(this.featured_section = {});
+})(this.featuredSection = {});
 
-$(document).ready(function () { 
-  featured_section.bgImage();
-});
