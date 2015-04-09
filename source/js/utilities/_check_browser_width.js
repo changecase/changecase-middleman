@@ -8,6 +8,14 @@
     {device: "desktop",    min_width: 1140}
   ];
 
+  var test = function (browser, deviceWidth, device) {
+    if (browser >= deviceWidth) {
+      if (breakpointDevice !== device) {
+        breakpointDevice = device;
+        console.log(device + ' size (' + deviceWidth + 'px)')
+      }
+    }
+  };
   browserWidth.broadcast = function(){
     for(i=0; i<devices.length; i++){
       var $_browserWidth = $(window).width();
@@ -17,20 +25,10 @@
         var nextWidth = devices[i + 1].min_width;
 
         if ($_browserWidth < nextWidth) {
-          if ($_browserWidth >= thisWidth) {
-            if (breakpointDevice !== devices[i].device) {
-              console.log(devices[i].device + ' size (' + devices[i].min_width + 'px)');
-              breakpointDevice = devices[i].device;
-            }
-          }
+          test($_browserWidth, thisWidth, devices[i].device);
         }
       } else {
-        if ($_browserWidth >= thisWidth) {
-          if (breakpointDevice !== devices[i].device) {
-            console.log(devices[i].device + ' size (' + devices[i].min_width + 'px)');
-            breakpointDevice = devices[i].device;
-          }
-        }
+        test($_browserWidth, thisWidth, devices[i].device);
       }
     }
     $( window ).resize(function(){
