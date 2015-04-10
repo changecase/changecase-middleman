@@ -1,6 +1,6 @@
 ---
 title: Make Your Own Custom Tiles in SharePoint 2013
-title_image: dinocar.min.jpg
+title_image: dinocar.min.jpg_
 date: 2014-06-04
 tags: microsoft, sharepoint, promoted links list, tiles, custom
 description: Learn to build custom tiles in SharePoint 2013 with the Promoted Links list.
@@ -8,7 +8,7 @@ alias: blog/2014/06/04/make-your-own-custom-tiles-in-sharepoint-2013.html
 ---
 
 Creating your own custom tiles is super easy in SharePoint 2013. Organizing 
-them can take a little bit more planning.
+them can take a little bit more planning. 
 
 The following method will create tiles that will work from theme to theme 
 without needing any further configuration. It will also ensure that you are 
@@ -44,14 +44,18 @@ your theme's `TileBackgroundOverlay` slot to show through. Use white (hex color
 By using transparent pixels in a 24-bit PNG, the tile will work on just about 
 any color background. Be careful of the very light hues though.
 
-<form name="tileBackgroundColor" class="sharepoint-tile-settings">
-  <label for="bgcolor" accesskey="c" markdown="1">**Change the background color of the tile**:</label>
-  <input type="color" name="bgcolor" id="bgcolor" value="#aaaaaa" oninput="sharepointTile.backgroundColor(bgcolor.value)">
-</form>
-
-<div markdown="1" class="tile-group sharepoint-tile">
-![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile" }
-</div>
+<%= partial(:sharepoint_tile, locals: { 
+  tile: { 
+    image_url: 'changecase-suitcase.min.png'
+  },
+  form: {
+    name: "tileBackgroundColor",
+    background_color: {
+      color: "#aaaaaa",
+      label: "Background color"
+    }
+  }
+}) %>
 
 </aside>
 
@@ -143,25 +147,15 @@ Hit the **Save** button to add the tile to the list.
 
 Test the title and description!
 
-<form name="fieldPreview" class="sharepoint-tile-settings">
-  <fieldset>
-    <label for="tileTitle" accesskey="t" markdown="1">**Title**:</label>
-    <input type="text" name="tileTitle" id="tileTitle" value="" placeholder="Enter title" oninput="sharepointTile.header(tileTitle.value)">
-  </fieldset>
-  <fieldset>
-    <label for="tileDescription" accesskey="d" markdown="1">**Description**:</label>
-    <textarea name="tileDescription" id="tileDescription" rows="3" oninput="sharepointTile.description(tileDescription.value)"></textarea>
-  </fieldset>
-</form>
-
-<div markdown="1" class="tile-group sharepoint-tile">
-![Sample Tile](/images/changecase-suitcase.min.png){: class="sample-tile"}
-
-<div class="tile-content">
-<h4  class="tile-title"></h4>
-<p   class="tile-description"></p>
-</div>
-</div>
+<%= partial(:sharepoint_tile, locals: {
+  tile: {
+    image_url: 'changecase-suitcase.min.png',
+    content: true
+  },
+  form: {
+    name: 'fieldPreview',
+  }
+}) %>
 
 </aside>
 
