@@ -1,5 +1,5 @@
 (function (sp) {
-  $( '.tile-group' )
+  $( '.sharepoint-tile' )
     .on( 'mouseover', function(){
       sharepointTile.moveTileUp('0px');
     } )
