@@ -1,25 +1,26 @@
-form[name="tileBackgroundColor"] {
+.sharepoint-tile-settings {
   float: left;
   margin-bottom: 1em;
-  label {
-    float: left;
-    max-width: 75%;
-  }
-  input {
-    float: left;
-    clear: both;
-  }
-}
-
-form[name="fieldPreview"] {
-  float: left;
-  margin-bottom: 1em;
+  width: 100%;
   fieldset { 
     float: left; 
     width: 100%;
   }
+  label {
+    float: left;
+    &[for$="_InputBgColor"] {
+      max-width: 75%;
+      margin-right: 5%;
+    }
+    font-family: $accent-font;
+    font-weight: $bold;
+  }
   input,
-  textarea { width: 100%; }
+  textarea {
+    float: left;
+    width: 100%;
+  }
+  input[type="color"] { width: 20%; }
 }
 
 .sharepoint-tile {
