@@ -15,10 +15,17 @@ pre {
 
 .highlight { 
   overflow: scroll; 
+  margin-bottom: em(30px);
 }
 
 .highlight td {
-  padding: 8px 15px;
+  padding: 0 15px;
+}
+
+.highlight {
+  & + h2 {
+    margin-top: em(28px);
+  }
 }
 
 .gl {

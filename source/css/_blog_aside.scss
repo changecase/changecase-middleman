@@ -1,5 +1,7 @@
 .sharepoint-tile-settings {
+  & * {float: left;}
   float: left;
+  margin-top: em(5px);
   margin-bottom: 1em;
   width: 100%;
   fieldset { 
@@ -24,31 +26,34 @@
 }
 
 .sharepoint-tile {
+  $tile-size: em(144px);
+  $tile-text-color: #fff;
   float: left;
   clear: left;
   position: relative;
   overflow: hidden;
-  p {margin: 0;}
+  height: $tile-size;
+  img { 
+    background-color: #aaa;
+    height: $tile-size;
+  }
   .tile-content {
     position: absolute;
     top: 100px;
-    height: 150px;
+    height: $tile-size;
     width: 100%;
     padding-left: 1em;
     padding-right: 1em;
     background-color: rgba(0,0,0, 0.5);
     font-family: 'Segoe UI', sans-serif;
+    p {margin: 0;}
     .tile-title {
-      color: #fff;
+      color: $tile-text-color;
       margin-top: 0.5em;
     }
     .tile-description {
-      color: #fff;
+      color: $tile-text-color;
     }
   }
 }
 
-img.sample-tile { 
-  float: left; 
-  background-color: #aaa;
-}
