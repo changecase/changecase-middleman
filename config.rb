@@ -117,6 +117,8 @@ set :images_dir, 'images'
 
 set :partials_dir, 'partials'
 
+set :haml, { ugly: true }
+
 set :markdown_engine, :kramdown
 set :markdown, fenced_code_blocks: true, smartypants: true
 
