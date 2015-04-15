@@ -35,7 +35,7 @@
        width:90%;
        max-width: none;
        padding: 0 5%;
-       @include text-shadow(1px 1px 0px $text-color);
+       @include text-shadow(1px 1px 0px rgba($text-color, 0.5) );
      }
   }
 }
