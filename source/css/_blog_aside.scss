@@ -1,3 +1,9 @@
+.blog aside {
+  & + * {
+    clear: both;
+  }
+}
+
 .sharepoint-tile-settings {
   & * {float: left;}
   float: left;

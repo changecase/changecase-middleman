@@ -3,6 +3,8 @@ title: Press Release 2013
 title_image: press-report-improved.jpg
 date: 2014-01-03
 tags: report, booklet, advisicon
+media: 
+  - print
 alias: 
   - work/2013/01/03/press-release-2013.html
   - work/2014/01/03/press-releas-2013.html

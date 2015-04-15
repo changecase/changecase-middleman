@@ -3,6 +3,9 @@ title: Bike Walk Vote
 title_image: bikeWalkVoteLogo.png
 date: 2011-08-01
 tags: branding, logo, bike walk vote, politics
+media: 
+ - print
+ - web
 alias: 
   - work/2011/08/01/bike-walk-vote.html
   - work/2011/08/01/bike-walk-vote-logo.html

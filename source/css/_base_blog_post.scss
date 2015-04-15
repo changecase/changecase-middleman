@@ -10,7 +10,7 @@ strong                    { font-family: $accent-font; }
 
 // Portfolio
 .main article .portfolio_item {
-  height: 6em;
+  height: em(240px);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-attachment: scroll;
@@ -41,11 +41,26 @@ strong                    { font-family: $accent-font; }
 [itemprop="articleBody"] {
   // Get the first line of text to sit on the baseline
   padding-top: em(8px); 
+  & * { 
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Portfolio
+.work .main {
+  // Get the first line of text to sit on the baseline
+  & * { 
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .blog {
   ul {
-    margin: 0;
+    margin: 0 auto;
   }
   li:first-child {
     margin-top: em(24px);

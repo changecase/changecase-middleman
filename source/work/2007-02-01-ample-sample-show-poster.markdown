@@ -3,6 +3,8 @@ title: Ample Sample Show Poster
 title_image: ample_sample.png
 date: 2007-02-01
 tags: music, show poster, ample sample
+media: 
+  - print
 alias: work/2007/02/01/ample-sample-show-poster.html
 ---
 

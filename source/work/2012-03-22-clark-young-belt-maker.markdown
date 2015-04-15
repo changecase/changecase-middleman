@@ -3,6 +3,8 @@ title: Clark Young, Belt Maker
 title_image: clark-young-belt-maker-06.min.jpg
 date: 2012-03-22
 tags: clark young, belt maker, business card, fabric, handmade, craft, jean, material, stiched, recycled
+media: 
+  - print
 alias: work/2012/03/22/clark-young-belt-maker.html
 ---
 

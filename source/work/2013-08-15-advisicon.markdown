@@ -3,6 +3,9 @@ title: Advisicon
 title_image: advisicon-fun-day-2013-unicycle-viking-tee.min.jpg
 date: 2013-08-15
 tags: branding, unicycle, bike polo, advisicon, fun day, t-shirt, viking
+media: 
+  - print
+  - web
 alias: work/2013/08/15/advisicon.html
 ---
 

@@ -447,22 +447,38 @@ alias:
   - work.html
 change_frequency: weekly
 ---
-<h1>Work</h1>
-- if paginate && num_pages > 1 
-  <p>Page #{ page_number } of #{ num_pages }</p>
+%h1 Work
 
-  - if prev_page
-    <p>#{ link_to 'Previous page', prev_page }</p>
+%ul#filter-controls
+  %li
+    = link_to "All", '#',     class: 'all filter-btn', 'data-filter' => 'all'
+  %li
+    = link_to "Print", '#',   class: 'print filter-btn', 'data-filter' => '.print'
+  %li
+    = link_to "Web", '#',     class: 'web filter-btn', 'data-filter' => '.web'
+  %li
+    = link_to "Product", '#', class: 'product filter-btn', 'data-filter' => '.product'
+-#
+  - form_tag '', class: 'filter-form', method: 'post' do 
+    - field_set_tag do
+      = label_tag :filter_view
+      = button_tag "All",     class: 'all filter-btn', 'data-filter' => 'all'
+      = button_tag "Print",   class: 'print filter-btn', 'data-filter' => '.print'
+      = button_tag "Web",     class: 'web filter-btn', 'data-filter' => '.web'
+      = button_tag "Product", class: 'product filter-btn', 'data-filter' => '.product'
+#portfolio
+  - if paginate && num_pages > 1 
+    <p>Page #{ page_number } of #{ num_pages }</p>
 
-- page_articles.each_with_index do |article, i| 
-  - link_to article do 
-    %section.portfolio_item{ style: "background-image: url('/images/#{article.data.title_image}')" }
-      <h2>#{ article.title }</h2>
-      -#
-        use article.summary(250) if you have Nokogiri available to show just
-        the first 250 characters
+    - if prev_page
+      <p>#{ link_to 'Previous page', prev_page }</p>
 
-- if paginate 
-  - if next_page 
-    <p>#{ link_to 'Next page', next_page }</p>
+  - page_articles.each_with_index do |article, i| 
+    - link_to article, class: "p_item #{article.data.media.join(' ').downcase}", "data-order" => i do 
+      %section.portfolio_item{ style: "background-image: url('/images/#{article.data.title_image}')" }
+        <h2>#{ article.title }</h2>
+
+  - if paginate 
+    - if next_page 
+      <p>#{ link_to 'Next page', next_page }</p>
 

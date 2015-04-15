@@ -110,6 +110,7 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 @import "feat_icon";
 @import "base_footer";
 @import "blog_aside";
+@import "mixitup";
 // @import "media_query/smartphones";        // in landscape mode
 @media screen and (min-width: 480px) {
   ul.feat {
@@ -117,5 +118,5 @@ $grid-column-width: $grid-width / $grid-column-numbers;
   }
 }
 // @import "media_query/tablets";            // in portrait mode
-// @import "media_query/desktops";           // & laptops, standard size
+@import "media_query/desktops";           // & laptops, standard size
 // @import "media_query/print";              // printed

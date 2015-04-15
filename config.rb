@@ -182,5 +182,6 @@ end
 
 # Allow sprockets to use bower
 sprockets.append_path File.join root, 'bower_components'
+sprockets.import_asset 'mixitup/build/jquery.mixitup.min.js'
 
 activate :alias

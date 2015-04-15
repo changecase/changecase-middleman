@@ -10,7 +10,10 @@ ul.feat li { float: left; }
 // END Temporary
 
 // Front page nav icons
-ul.feat { padding: 0; }
+ul.feat { 
+  padding: 0; 
+  margin-top: 100vh;
+}
 ul.feat li { 
   display: block; 
   width: 100%;

@@ -3,6 +3,8 @@ title: Disjecta Halloween 2009 Poster
 title_image: disjecta_halloween_2009_color.jpg
 date: 2009-10-18
 tags: music, show poster, copy, e*rock, atole, guidance counselor, dj automation, disjecta
+media: 
+  - print
 alias: work/2009/10/18/disjecta-halloween-2009-poster.html
 ---
 
