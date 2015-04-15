@@ -17,7 +17,7 @@ $( document ).ready(function() {
   topNav.toggle('.header-container nav');
 
   // index
-  featuredSection.bgImage('data-image');
+  //featuredSection.bgImage('data-image');
 
   // all articles
   paralax.element('#article-title');
