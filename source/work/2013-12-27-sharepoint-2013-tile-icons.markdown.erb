@@ -1,0 +1,56 @@
+---
+title: SharePoint Tile Icons
+title_image: advisicon-sharepoint-tiles.min.png
+date: 2013-12-27
+tags: sharepoint, advisicon, promoted links list, design, tiles
+media: 
+  - web
+alias: 
+  - work/2013/08/15/advisicon.html
+  - work/2013/08/15/advisicon/
+
+---
+
+I've designed a variety of [custom tiles for SharePoint][custom-tiles] installations.
+READMORE
+
+The design process relies heavily on the stakeholders and users; we want to be
+sure that the symbol we use makes the destination guessible. The best way to
+achieve this is through several rounds of sketched iterations before deciding
+on a subset to build a high fidelity comp of.
+
+![Design process](advisicon-sharepoint-tile-development.min.jpg)
+
+In the end, the result is something like this:
+
+<%= partial(:sharepoint_tile, 
+            locals:{ tile: { image_url: 'services.png', 
+                             content: { heading: "Professional", 
+                                        description: "A bowtie and darby"} } }) %>
+
+<%= partial(:sharepoint_tile, 
+            locals:{ tile: { image_url: 'digital.png', 
+                             content: { heading: "QR Code", 
+                                        description: "A hyperlink you can capture with a camera"} } }) %>
+
+<%= partial(:sharepoint_tile, 
+            locals:{ tile: { image_url: 'cd.png', 
+                             content: { heading: "CDs",
+                                        description: "Store music, documents, and other data"} } }) %>
+
+<%= partial(:sharepoint_tile, 
+            locals:{ tile: { image_url: 'book.png', 
+                             content: { heading: "Book",
+                                        description: "Reading material"} } }) %>
+
+<%= partial(:sharepoint_tile, 
+            locals:{ tile: { image_url: 'software.png', 
+                             content: { heading: "Program",
+                                        description: "This one is pretty simple"} } }) %>
+
+<%= partial(:sharepoint_tile, 
+            locals:{ tile: { image_url: 'flowchart.png', 
+                             content: { heading: "Flowchart",
+                                        description: "Start, choice, and finish"} } }) %>
+
+[custom-tiles]: /blog/2014/06/04/make-your-own-custom-tiles-in-sharepoint-2013

@@ -1,14 +1,14 @@
 <% if defined?(form) && !form.empty? %>
   <% form_tag '#', name: form[:name], class: "sharepoint-tile-settings" do %>
 
-    <% if form.has_key?(:background_color) && !form[:background_color].empty? %>
+    <% if form.key?(:background_color) && !form[:background_color].empty? %>
       <%= label_tag "#{form[:name]}_InputBgColor", caption: form[:background_color][:label] %>
       <%= input_tag :color, name: "bgcolor", id: "#{form[:name]}_InputBgColor", 
         value: form[:background_color][:color], 
         oninput: "sharepointTile.backgroundColor(bgcolor.value)" %>
     <% end %>
 
-    <% if tile.has_key?(:content) && tile[:content] %>
+    <% if tile.key?(:content) && tile[:content] %>
       <% field_set_tag do %>
         <%= label_tag "#{form[:name]}_InputTileTitle", caption: "Title" %>
         <%= text_field_tag :tileTitle,  id: "#{form[:name]}_InputTileTitle", 
@@ -27,10 +27,18 @@
 
 <div class="sharepoint-tile">
   <%= image_tag url_for(tile[:image_url]), class: "sample-tile" %>
-  <% if tile.has_key?(:content) && tile[:content] %>
+  <% if tile.key?(:content) && tile[:content] %>
     <div class="tile-content">
-      <h4 class="tile-title"></h4>
-      <p  class="tile-description"></p>
+      <h4 class="tile-title">
+        <% if tile[:content].respond_to?(:key?) && tile[:content].key?(:heading) %>
+          <%= tile[:content][:heading] %>
+        <% end %>
+      </h4>
+      <p  class="tile-description">
+        <% if tile[:content].respond_to?(:key?) && tile[:content].key?(:description) %>
+          <%= tile[:content][:description] %>
+        <% end %>
+      </p>
     </div>
   <% end %>
 </div>

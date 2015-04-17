@@ -1,10 +1,10 @@
 (function (sp) {
   $( '.sharepoint-tile' )
     .on( 'mouseover', function(){
-      sharepointTile.moveTileUp('0px');
+      sharepointTile.moveTileUp($(this), '0px');
     } )
     .on( 'mouseout', function(){
-      sharepointTile.moveTileDown('100px');
+      sharepointTile.moveTileDown($(this), '100px');
     } );
 
   sp.backgroundColor = function(colorValue) {
@@ -16,15 +16,15 @@
   sp.description = function(tileDescription) {
     $('aside .tile-description').html(tileDescription);
   };
-  sp.moveTileUp = function(amount) {
-    $('aside .tile-content')
+  sp.moveTileUp = function(target, amount) {
+    target.children('.tile-content')
       .stop() // prevent animation queuing so it animates only while being hovered
       .animate({
         'top': '0'
       }, 500, function(){});
   };
-  sp.moveTileDown = function(amount) {
-    $('aside .tile-content')
+  sp.moveTileDown = function(target, amount) {
+    target.children('.tile-content')
       .stop() // prevent animation queuing so it animates only while being hovered
       .animate({
         'top': amount

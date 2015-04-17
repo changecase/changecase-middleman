@@ -39,6 +39,10 @@
   position: relative;
   overflow: hidden;
   height: $tile-size;
+  margin: 0 em(10px) em(24px) 0 !important;
+  & + .sharepoint-tile {
+    clear: none;
+  }
   img { 
     background-color: #aaa;
     height: $tile-size;
@@ -47,9 +51,9 @@
     position: absolute;
     top: 100px;
     height: $tile-size;
-    width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
     background-color: rgba(0,0,0, 0.5);
     font-family: 'Segoe UI', sans-serif;
     p {margin: 0;}
