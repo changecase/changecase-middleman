@@ -29,8 +29,8 @@ Delegate Control, specifically the `SuiteLinksDelegate`. If this control is
 available in your Master Page, you can simply remove it or comment it out to 
 prevent SharePoint from rendering these links.
 
-Taking this approach allows you to make the change merely by editing the Master 
-Page in SharePoint Designer, Visual Studio, Vim or any other text editor. By 
+Taking this approach allows you to make the change merely by [editing the Master 
+Page][5] in SharePoint Designer, Visual Studio, Vim or any other text editor. By 
 removing the control from the Master Page, you save some processor overhead 
 since SharePoint doesn't have to bother rendering the links at all (slightly 
 decreasing page load time).
@@ -139,3 +139,4 @@ your level of access.
 [2]: #prevent-sharepoint-from-importing-the-control
 [3]: #hide-the-link-with-css
 [4]: #hide-the-links-with-javacript
+[5]: /blog/2015/10/28/safely-customize-master-pages-in-sharepoint-2013 "Safely Customize Master Pages in SharePoint 2013"

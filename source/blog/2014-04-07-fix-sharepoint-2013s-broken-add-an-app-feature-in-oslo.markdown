@@ -78,7 +78,8 @@ attribute on other controls.
 
 ## The Fix
 
-Knowing the requirements of SharePoint makes the fix quite self-evident: 
+Knowing the requirements of SharePoint makes the fix quite self-evident (still,
+it is a good idea to make your fix in a [custom master page][1]): 
 
 ~~~ html
 <div class="ms-tableCell ms-verticalAlignTop">
@@ -115,3 +116,5 @@ Knowing the requirements of SharePoint makes the fix quite self-evident:
 
 The **Add an App** page will load now. You'll see a small app menu over on the 
 Left Nav quicklaunch.
+
+[1]: /blog/2015/10/28/safely-customize-master-pages-in-sharepoint-2013 "Safely Customize Master Pages in SharePoint 2013"

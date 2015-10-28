@@ -51,7 +51,7 @@ move on to including it.
 
 ## Include Your Stylesheet with CssRegistration 
 
-First off, it is a really good idea to be working off of a custom master page 
+First off, it is a really good idea to be working off of a [custom master page][4] 
 for edits to your SharePoint deployment of this nature. At the very least, backup
 the master page you are currently using.
 
@@ -134,3 +134,4 @@ and your custom css will be included!
 [1]: http://msdn.microsoft.com/en-us/library/office/ms438349(v=office.14).aspx "Cascading Style Sheets Class Usage in SharePoint Foundation"
 [2]: http://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.csslink(v=office.15).aspx "CssLink class"
 [3]: https://www.nothingbutsharepoint.com/sites/eusp/Pages/Understanding-SharePoint-CSSLink-and-how-to-add-your-custom-CSS-in-SharePoint-2010.aspx "Understanding SharePoint: CSSLink and how to add your custom CSS in SharePoint 2010"
+[4]: /blog/2015/10/28/safely-customize-master-pages-in-sharepoint-2013 "Safely Customize Master Pages in SharePoint 2013"
