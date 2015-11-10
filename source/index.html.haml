@@ -5,12 +5,15 @@ alias:
 change_frequency: weekly
 ---
 
-%section.featured{ 'data-image' => 'dinocar.min.jpg' }
-  // Put featured content (slideshow?) here
+- article = blog('blog').articles[0]
+- click_text = if article.data.cta_text then article.data.cta_text else 'Read more' end
+
+%section.featured{ 'data-image' => article.data.title_image }
+  -# Put featured content (slideshow?) here
   .callout
     %header
-      %h1  SharePoint 2013 New Tips
-      = link_to 'Learn to make custom tiles', '/blog/2014/06/04/make-your-own-custom-tiles-in-sharepoint-2013', class: "cta"
+      %h1= article.title
+      = link_to click_text, article.url, class: "cta"
 
 %ul.feat
   %li
@@ -19,24 +22,3 @@ change_frequency: weekly
     = link_to 'Work', '/work',  class: "feat-icon work"
   %li
     = link_to 'About', '/about', class: "feat-icon about"
-
--#
-  %header
-    %h1 Recent Blog Posts
-  - blog('blog').articles[0...5].each do |article|
-    %section
-      %h2 
-        %a{ href: article.url }= article.title
-        %br
-        %time= article.date.strftime('%b %e %Y')
-      = article.summary
-      %a{ href: article.url } Read more
-
-  %header
-    %h1 New Work
-  - blog('work').articles[0...5].each do |article|
-    %section
-      %h2 
-        %a{ href: article.url }= article.title
-      = article.summary
-      %a{ href: article.url } Read more

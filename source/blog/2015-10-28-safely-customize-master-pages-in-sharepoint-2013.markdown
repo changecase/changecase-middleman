@@ -1,5 +1,6 @@
 ---
 title: Safely Customize Master Pages in SharePoint 2013
+cta_text: Learn how
 title_image: DeathtoStock_London7.min.jpg
 date: 2015-10-28
 tags: SharePoint 2013, master page
