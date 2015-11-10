@@ -91,18 +91,28 @@
       padding: 0;
     }
     ul { 
+      display: -ms-flex;
       display: -webkit-flex; 
       display: flex;
+      -ms-flex-flow: row wrap;
       -webkit-flex-flow: row wrap;
       flex-flow: row wrap;
+      -ms-justify-content: space-between;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
+      margin: 1em 0;
     }
     ul li { 
+      -ms-flex: 1 1 auto;
       -webkit-flex: 1 1 auto;
       flex: 1 1 auto;
       margin-left: 1em;
       -webkit-border-radius: 3px;
+      border-radius: 3px;
       overflow: hidden;
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }
