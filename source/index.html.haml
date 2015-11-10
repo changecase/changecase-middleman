@@ -6,9 +6,9 @@ change_frequency: weekly
 ---
 
 - article = blog('blog').articles[0]
-- click_text = if article.data.cta_text then article.data.cta_text else 'Read more' end
+- click_text = article.data.cta_text ? article.data.cta_text : 'Read more' 
 
-%section.featured{ 'data-image' => article.data.title_image }
+%section.featured{ 'data-image' => image_path(article.data.title_image) }
   -# Put featured content (slideshow?) here
   .callout
     %header

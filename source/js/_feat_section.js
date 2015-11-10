@@ -2,7 +2,7 @@
 
   section.bgImage = function(imgName) {
     $( '.featured' ).css( 'background-image', function() {
-      return 'url("/images/' + $( this ).attr(imgName) + '")';
+      return 'url("' + $( this ).attr(imgName) + '")';
     });
   };
 
