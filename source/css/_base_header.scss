@@ -1,6 +1,16 @@
 // The header container. Used to wrap the header contents (including
 // the site's global <header>.
 // INVESTIGATE: Is this extra wrapper even neccessary?
+%nav-icon {
+  @extend .fa;
+  display: block;
+  float: right;
+  font-size: 2.618em;
+  line-height: 48px;
+  color: $background-color;
+  &:hover { color: $secondary-color; }
+}
+
 .header-container { 
   font-family: $accent-font; 
   //border-bottom-width: .25em;
@@ -22,90 +32,77 @@
 
 // Site logo styles.
 .header-container .title { 
-    font-size: 1.5em; 
-    line-height: 48px;
-    margin: 0;
+  font-size: 1.5em; 
+  line-height: 48px;
+  margin: 0;
+  float: left;
+  a {
+    text-indent: -5000px;
+    background: transparent image-url('logo.svg') no-repeat 0% 50%;
+    background-size: 248px;
+    width: 248px;
     float: left;
-    a {
-      text-indent: -5000px;
-      background: transparent image-url('logo.svg') no-repeat 0% 50%;
-      background-size: 248px;
-      width: 248px;
-      float: left;
-      &:hover, 
-      &:focus, 
-      &:active { 
-        color:$background-color; 
-        background-color: $primary-color; 
-        background-image: image-url('logo-active.svg');
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: none;
-      }
+    &:hover, 
+    &:focus, 
+    &:active { 
+      color:$background-color; 
+      background-color: $primary-color; 
+      background-image: image-url('logo-active.svg');
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
     }
   }
+}
 
-  // Site navigation
-    // When collapsed
-  .header-container nav.collapsed {
-    ul { display: none; }
-    // BEGIN mobile first injection
-    clear: none;
-    margin-top: 0;
-    height: 48px;
-    width: 36px;
-    @extend .fa;
-    @extend .fa-bars;
-    float: right;
-    font-size: 2.618em;
-    line-height: 48px;
-    &::before { 
-      position: relative;
-      float: right; 
-      color: $background-color;
-    }
-    &:hover::before {
-      color: $secondary-color;
-    }
-    // END mobile first injection
-  }
-
+// Site navigation
+.header-container {
+  nav {
     // When default
-  .header-container nav {
-    clear: left;
     margin-top: 4.5em;
-    ul {
-      margin: 0;
-      padding: 0;
-    }
     a {
       display: block;
-      text-decoration: none;
       font-weight: $bold;
-      color: $background-color;
       background: $secondary-color;
       margin: 0 0 0.6em;
-      padding: .4em 0 .5em;
+      padding: 0.4em 0 0.5em;
       text-align: center;
       &:hover, &:focus, &:active { border: none; }
     }
+    &.collapsed {
+      margin-top: 0;
+      ul { display: none; }
+    }
+    &.expanded {}
   }
 
-  // when expanded
-  .header-container i {
-    @extend .fa;
-    @extend .fa-times;
-    display: block; // override .fa
-    &::before { 
-      position: absolute;
-      top: 0;
-      right: 5%;
-      color: $background-color;
-      font-size: 2.618em;
-      line-height: 48px;
+  i {
+    @extend %nav-icon;
+    &.open {  @extend .fa-bars; }
+    &.close { @extend .fa-times; }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .header-container i { display: none; }
+  .header-container nav.collapsed {
+    a {
+      margin: 0;
+      padding: 0;
     }
-    &:hover::before {
-      color: $secondary-color;
+    ul { 
+      display: -webkit-flex; 
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    ul li { 
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      margin-left: 1em;
+      -webkit-border-radius: 3px;
+      overflow: hidden;
     }
   }
-
+}
