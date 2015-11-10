@@ -16,6 +16,10 @@ pre {
 .highlight { 
   overflow: scroll; 
   margin-bottom: em(30px);
+  table {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .highlight td {
