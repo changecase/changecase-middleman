@@ -17,9 +17,10 @@ $( document ).ready(function() {
   topNav.toggle('.header-container nav');
 
   // index
-  featuredSection.bgImage('data-image');
+  featuredSection.bgImage('.featured', 'data-image');
 
   // all articles
+  featuredSection.bgImage('#article-title', 'data-image', {'displayMobile':false});
   paralax.element('#article-title');
 
   // unique pages

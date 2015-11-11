@@ -1,11 +1,6 @@
 - wrap_layout :layout do
 
-  :plain
-    <style type='text/css' media='only screen and (min-width: 1140px)'>
-    #article-title{ background-image: url("/images/#{current_resource.data.title_image}") }
-    </style>
-    
-  #article-title
+  #article-title{ 'data-image' => image_path(current_resource.data.title_image) }
     %h1{ itemprop: "headline" }= current_resource.data.title
   = find_and_preserve do
     %div{ itemprop: "articleBody" }

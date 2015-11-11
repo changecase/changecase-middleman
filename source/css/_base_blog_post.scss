@@ -69,3 +69,19 @@ strong                    { font-family: $accent-font; }
 
 .work .main p img,
 .blog .main p img {max-width: 100%}
+
+@media only screen and (min-width: 1140px) {
+  .work, .blog {
+    #article-title h1::after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+      opacity: 0.5;
+      z-index: -200;
+    }
+  }
+}
