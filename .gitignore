@@ -27,3 +27,6 @@ img/
 # Ignore package managers
 bower_components/
 node_modules/
+
+# Ignore files that are too big
+source/images/bwv-business-card.psd
