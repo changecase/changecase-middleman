@@ -19,9 +19,11 @@
 # Ignore swap files
 *.swp
 *.swo
+.tern-port
 
 # Ignore temporary img folder
 img/
 
-# Ignore bower
+# Ignore package managers
 bower_components/
+node_modules/

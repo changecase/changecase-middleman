@@ -53,12 +53,12 @@
     .header-container
       %header.wrapper.clearfix
         %h1.title 
-          %a{ href: '/', title: 'home' } Jeff Jacobson-Swartfager
+          %a{ href: home_path, title: 'home' } Jeff Jacobson-Swartfager
         %nav
           %ul
-            %li= link_to 'Blog',  '/blog'
-            %li= link_to 'Work',  '/work'
-            %li= link_to 'About', '/about'
+            %li= link_to 'Blog',  blog_path
+            %li= link_to 'Work',  work_path
+            %li= link_to 'About', about_path
 
     .main-container
       .main.wrapper.clearfix
@@ -73,22 +73,22 @@
           %h3 Social
           %ul.social_list
             %li
-              %a.twitter.icon{ href: 'https://twitter.com/changecase', title: 'twitter' }
+              %a.twitter.icon{ href: tweets_url, title: 'twitter' }
             %li
-              %a.linkedin.icon{ href: 'https://www.linkedin.com/in/changecase', title: 'linkedin' }
+              %a.linkedin.icon{ href: linkedin_url, title: 'linkedin' }
             %li
               - if page_classes.include? "blog"
-                %a.googleplus.icon{ href: 'https://plus.google.com/117625331179664688155?rel=author' }
+                %a.googleplus.icon{ href: googleplus_url }
               - else
-                %a.googleplus.icon{ href: 'https://plus.google.com/117625331179664688155/posts' }
+                %a.googleplus.icon{ href: googleplus_url }
             %li
-              %a.github.icon{ href: 'https://github.com/changecase' }
+              %a.github.icon{ href: github_url }
             %li
-              %a.foursquare.icon{ href: 'https://foursquare.com/user/1616439' }
+              %a.foursquare.icon{ href: foursquare_url }
             %li
-              %a.instagram.icon{ href: 'http://instagram.com/jeff_ja' }
+              %a.instagram.icon{ href: instagram_url }
             %li
-              %a.flickr.icon{ href: 'https://www.flickr.com/photos/changecase' }
+              %a.flickr.icon{ href: flickr_url }
         %p Jeff Jacobson-Swartfager &copy; #{Date.today.year.to_s}
 
 

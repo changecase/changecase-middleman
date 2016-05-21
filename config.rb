@@ -1,3 +1,6 @@
+require "lib/helpers/routes.rb"
+helpers Routes
+
 ###
 # Blog settings
 ###

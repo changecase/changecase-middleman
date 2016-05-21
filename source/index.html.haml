@@ -16,9 +16,6 @@ change_frequency: weekly
       = link_to click_text, article.url, class: "cta"
 
 %ul.feat
-  %li
-    = link_to 'Blog', '/blog',  class: "feat-icon blog"
-  %li
-    = link_to 'Work', '/work',  class: "feat-icon work"
-  %li
-    = link_to 'About', '/about', class: "feat-icon about"
+  %li= link_to 'Blog',  blog_path,  class: "feat-icon blog"
+  %li= link_to 'Work',  work_path,  class: "feat-icon work"
+  %li= link_to 'About', about_path, class: "feat-icon about"
