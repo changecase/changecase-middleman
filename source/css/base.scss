@@ -2,46 +2,11 @@
    VARIABLES 
    ======================================================================== */
 
-/* Colors */
-
-$primary-color: #c44;
-$secondary-color: #a33;
-$tertiary-color: #c9a54e;
-$quaternary-color: #185277;
-$quinary-color: #31acad;
-$background-color: #f3f3f3;
-$text-color: #333;
-
-/* Fonts */
-
-$accent-font: "raleway", sans-serif; // Raleway: 400, 700
-$body-font: "prociono", serif; // Prociono: 400
-$mono-font: "anonymous-pro", monospace, sans-serif; // Anonymous Pro: 400
-
-/* Weights */
-
-$regular: 400;
-$bold:    700;
-
-/* Typography */
-  // /* Scale */
-  // 0.236em    
-  // 0.382em    
-  // 0.618em    
-  // 1em
-  // 1.618em    
-  // 2.618em    
-  // 4.236em    
-  // 6.854em
-$base__font-size: 16px; // assume 16px
-$base__line-height: 24px; 
-$base__height: $base__line-height / $base__font-size;
-
-/* Grid */
-$grid-width: 1000;
-$grid-column-numbers: 12;
-$grid-column-gutter-width: 20;
-$grid-column-width: $grid-width / $grid-column-numbers;
+@import "colors";
+@import "fonts";
+@import "font_weights";
+@import "typography";
+@import "grid";
 
 /* ========================================================================
    MIXINS 
@@ -50,10 +15,10 @@ $grid-column-width: $grid-width / $grid-column-numbers;
 @mixin vertical-linear-gradient( $start-color, $start-opacity, $end-color, $end-opacity ) {
   background: -webkit-gradient(linear, 0% $start-opacity, 0% $end-opacity, from($start-color), to($end-color));         // Safari 4-5, Chrome 1-9
   background: -webkit-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                       // Safari 5.1, Chrome 10+
-  background: -moz-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                          // Firefox 3.6+
-  background: -ms-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                           // IE 10
-  background: -o-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                            // Opera 11.10+
-  background: linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);
+  background:    -moz-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                       // Firefox 3.6+
+  background:     -ms-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                       // IE 10
+  background:      -o-linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);                       // Opera 11.10+
+  background:         linear-gradient(top, $start-color $start-opacity, $end-color $end-opacity);
 }
 
 @mixin vertical-align {
